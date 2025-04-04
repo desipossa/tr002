@@ -24,14 +24,13 @@
 
 .main_visual {
     position: relative;
-    height: 640px;
-    background: url(../images/visual01.jpg) no-repeat center center/cover;
 }
 
 .main_visual .slg {
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: 2;
     transform: translate(-50%, -50%);
 }
 
@@ -50,6 +49,66 @@
     color: #fff;
 
     text-align: center;
+}
+
+.main_visual .main_visual_slide .itm {
+    height: 640px;
+}
+
+.main_visual .main_visual_slide .itm01 {
+    background: url(../images/visual01.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_visual_slide .itm02 {
+    background: url(../images/visual02.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_visual_slide .slick-arrow {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.main_visual .main_visual_slide .slick-prev {
+    left: 120px;
+
+    transform: translate(0, -50%) rotate(-45deg);
+}
+
+.main_visual .main_visual_slide .slick-next {
+    right: 120px;
+
+    transform: translate(0, -50%) rotate(135deg);
+}
+
+.main_visual .main_visual_slide .slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+
+    display: flex;
+    gap: 8px;
+
+    transform: translate(-50%, 0);
+}
+
+.main_visual .main_visual_slide .slick-dots li button {
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    font-size: 0;
+}
+
+.main_visual .main_visual_slide .slick-dots li.slick-active button {
+    background: #f00;
 }
 
 .main_content .inner {
