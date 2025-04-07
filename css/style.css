@@ -1,130 +1,30 @@
+.header {
+    background: #333;
+}
+
 .header .inner {
     display: flex;
-    align-items: center;
-    height: 120px;
+}
+
+.header h1 img {
+    height: 32px;
 }
 
 .header .gnb {
     margin-left: auto;
 }
 
-.header .gnb>ul {
-    display: flex;
-    gap: 40px;
-}
-
-.header .gnb>ul a {
-    display: block;
-    line-height: 120px;
-    white-space: nowrap;
-
-    font-size: 17px;
-    font-weight: 600;
-}
-
-.main_visual {
-    position: relative;
-}
-
-.main_visual .slg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
-    transform: translate(-50%, -50%);
-}
-
-.main_visual .slg h2 {
-    font-size: 40px;
-    font-weight: 700;
+.header .gnb>ul>li>a {
     color: #fff;
-
-    text-align: center;
-}
-
-.main_visual .slg p {
-    margin-top: 16px;
     font-size: 16px;
     font-weight: 400;
-    color: #fff;
-
-    text-align: center;
 }
 
-.main_visual .main_visual_slide .itm {
-    height: 640px;
-}
-
-.main_visual .main_visual_slide .itm01 {
-    background: url(../images/visual01.jpg) no-repeat center center/cover;
-}
-
-.main_visual .main_visual_slide .itm02 {
-    background: url(../images/visual02.jpg) no-repeat center center/cover;
-}
-
-.main_visual .main_visual_slide .slick-arrow {
-    font-size: 0;
-    width: 40px;
-    height: 40px;
-
-    position: absolute;
-    top: 50%;
-    z-index: 2;
-
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
-}
-
-.main_visual .main_visual_slide .slick-prev {
-    left: 120px;
-
-    transform: translate(0, -50%) rotate(-45deg);
-}
-
-.main_visual .main_visual_slide .slick-next {
-    right: 120px;
-
-    transform: translate(0, -50%) rotate(135deg);
-}
-
-.main_visual .main_visual_slide .slick-dots {
-    position: absolute;
-    left: 50%;
-    bottom: 80px;
-
+.header .gnb>ul {
     display: flex;
-    gap: 8px;
-
-    transform: translate(-50%, 0);
 }
 
-.main_visual .main_visual_slide .slick-dots li button {
-    width: 20px;
-    height: 20px;
-    background: #333;
-    border-radius: 50%;
-    font-size: 0;
-}
-
-.main_visual .main_visual_slide .slick-dots li.slick-active button {
-    background: #f00;
-}
-
-.main_content .inner {
+.header .utils {
     display: flex;
-    gap: 30px;
-}
-
-.main_content .inner .itm {
-    flex: 1;
-}
-
-.main_content .inner .itm img {
-    width: 100%;
-}
-
-.footer {
-    padding: 40px 0;
-    background: #f9f9f9;
+    margin-left: 80px;
 }
