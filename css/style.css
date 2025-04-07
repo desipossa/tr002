@@ -4,6 +4,8 @@
 
 .header .inner {
     display: flex;
+    align-items: center;
+    height: 80px;
 }
 
 .header h1 img {
@@ -15,16 +17,77 @@
 }
 
 .header .gnb>ul>li>a {
+    display: block;
+    line-height: 80px;
     color: #fff;
     font-size: 16px;
     font-weight: 400;
 }
 
+
+
 .header .gnb>ul {
     display: flex;
+    gap: 40px;
 }
 
 .header .utils {
     display: flex;
+    gap: 8px;
     margin-left: 80px;
+}
+
+.main_visual {
+    position: relative;
+    background: #ddd;
+    height: calc(100vh - 80px);
+}
+
+.main_visual .wheel {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    height: 60px;
+
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.main_visual .wheel::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 32px;
+    height: 48px;
+    border: 2px solid #fff;
+    border-radius: 16px;
+}
+
+.main_visual .wheel::after {
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 2px;
+    height: 8px;
+    background: #fff;
+
+    animation: wheel 1s infinite;
+}
+
+@keyframes wheel {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        transform: translate(-50%, 4px);
+    }
 }
