@@ -22,6 +22,8 @@
     color: #fff;
     font-size: 16px;
     font-weight: 400;
+
+    white-space: nowrap;
 }
 
 
@@ -42,6 +44,7 @@
 }
 
 .main_visual .main_visual_slide .itm {
+    position: relative;
     height: calc(100vh - 80px);
 }
 
@@ -59,6 +62,26 @@
 
 .main_visual .main_visual_slide .txt {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 1170px;
+    width: 100%;
+}
+
+.main_visual .main_visual_slide .txt strong {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.main_visual .main_visual_slide .txt p {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
 }
 
 .main_visual .arrows {
@@ -67,7 +90,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    max-width: 1410px;
+    max-width: 1530px;
     width: 100%;
 }
 
@@ -138,4 +161,43 @@
     100% {
         transform: translate(-50%, 4px);
     }
+}
+
+
+.main_best {}
+
+.main_best .inner {
+    display: flex;
+    gap: 30px;
+}
+
+.main_best .inner>* {
+    flex: 1;
+}
+
+.main_best .inner .itm img {
+    width: 100%;
+    background: #f9f9f9;
+}
+
+.main_best .inner .itm p {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.main_banner {
+    background: url(../images/main_product01.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+.main_banner .title {
+    margin-bottom: 0;
+}
+
+.main_banner .title h2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2em;
 }
