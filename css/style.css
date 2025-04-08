@@ -57,6 +57,10 @@
     background: url(../images/main_visual03.jpg) no-repeat center center/cover;
 }
 
+.main_visual .main_visual_slide .txt {
+    position: absolute;
+}
+
 .main_visual .arrows {
     position: absolute;
     top: 50%;
