@@ -276,3 +276,7 @@
 .main_product .slick-dots li.slick-active button {
     background: #ff6347;
 }
+
+.main_content {
+    background: #f9f9f9;
+}
