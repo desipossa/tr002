@@ -53,4 +53,13 @@ $(function () {
     $('.to_top').on('click', function () {
         $('html, body').animate({ scrollTop: 0 }, 1000)
     })
+});
+
+$(function () {
+    $('.footer #lnk').on('change', function () {
+        let lnk = $(this).val();
+        if (lnk) {
+            window.open(lnk)
+        }
+    })
 })

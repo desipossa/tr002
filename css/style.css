@@ -382,6 +382,31 @@
     line-height: 16px;
 }
 
+.footer address {
+    margin-top: 24px;
+    color: #aaa;
+    text-align: center;
+
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.footer .f_lnk {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 40px;
+}
+
+.footer #lnk {
+    background: #333;
+    height: 40px;
+    padding: 0 16px;
+    color: #fff;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
 
 .to_top {
     position: fixed;
@@ -392,5 +417,5 @@
 .to_top button {
     width: 40px;
     height: 40px;
-    background: #333;
+    background: #666;
 }
