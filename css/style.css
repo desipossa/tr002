@@ -336,6 +336,52 @@
     text-align: center;
 }
 
+.footer {
+    padding: 80px 0;
+    background: #333;
+}
+
+.footer .sns {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.footer .customer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    margin-top: 24px;
+}
+
+.footer .customer li {
+    position: relative;
+}
+
+.footer .customer li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 0.5em;
+    background: #aaa;
+}
+
+.footer .customer a {
+    color: #fff;
+}
+
+.footer .tel {
+    margin-top: 8px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+}
+
 
 .to_top {
     position: fixed;
