@@ -46,4 +46,11 @@ $(function () {
         $('.main_content .tab_content .con').removeClass('on');
         $('.main_content .tab_content .con').eq(idx).addClass('on');
     });
+});
+
+
+$(function () {
+    $('.to_top').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 1000)
+    })
 })
