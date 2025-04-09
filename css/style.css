@@ -280,3 +280,59 @@
 .main_content {
     background: #f9f9f9;
 }
+
+.main_content .tab_menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.main_content .tab_menu button {
+    position: relative;
+    height: 40px;
+    padding: 0 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.main_content .tab_menu button::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 1px;
+    background: #333;
+    transition: 0.5s;
+}
+
+.main_content .tab_menu button.on::after {
+
+    width: 100%;
+
+}
+
+.main_content .tab_content .con {
+    display: flex;
+    gap: 30px;
+    visibility: hidden;
+    height: 0;
+}
+
+.main_content .tab_content .con.on {
+    visibility: visible;
+    height: auto;
+}
+
+.main_content .tab_content .con>* {
+    flex: 1;
+}
+
+.main_content .tab_content .con img {
+    background: #fff;
+}
+
+.main_content .tab_content .con p {
+    margin-top: 16px;
+    text-align: center;
+}

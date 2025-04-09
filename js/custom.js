@@ -32,4 +32,18 @@ $(function () {
         $('.main_product_slide').slick('slickNext');
     });
 
+});
+
+
+$(function () {
+    $('.main_content .tab_menu button').on('click', function () {
+        let idx = $(this).index(); // 클릭한 것의 번호를 가져와서 저장함
+        console.log(idx);
+
+        $('.main_content .tab_menu button').removeClass('on');
+        $(this).addClass('on');
+
+        $('.main_content .tab_content .con').removeClass('on');
+        $('.main_content .tab_content .con').eq(idx).addClass('on');
+    });
 })
