@@ -1,0 +1,51 @@
+.header .hd_wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1410px;
+    height: 120px;
+}
+
+.header .hd_wrap h1 img {
+    height: 40px;
+}
+
+.header .gnb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    line-height: 120px;
+}
+
+.st {
+    padding: 120px 0;
+}
+
+.st .inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.st .inner>* {
+    flex: 1;
+}
+
+.st .fix {
+    position: sticky;
+    top: 120px;
+}

@@ -1,0 +1,46 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #333;
+}
+
+.header .hd_wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 80px;
+    height: 120px;
+}
+
+.header .hd_wrap h1 img {
+    height: 40px;
+}
+
+.header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    line-height: 120px;
+    color: #fff;
+}
+
+.header .utils a {
+    color: #fff;
+}
+
+#content {
+    margin-bottom: 100vh;
+}
