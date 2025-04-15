@@ -1,0 +1,188 @@
+body {
+    background: #f9f9f9;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    height: 30vh;
+    background: #e76f51;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 480px;
+    z-index: 1;
+
+    width: 400px;
+    height: 400px;
+
+    background: #2a9d8f;
+    transform: rotate(45deg);
+}
+
+.sun {
+    position: absolute;
+    top: 160px;
+    left: 320px;
+
+    width: 80px;
+    height: 80px;
+
+    background: #e9c46a;
+    color: transparent;
+
+    border-radius: 50%;
+
+    animation: sunMove 4s infinite linear;
+}
+
+.sun::before {
+    content: "";
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    background: #e9c46a;
+    transform: translate(0, -50%);
+    width: 40px;
+    height: 16px;
+
+    border-radius: 8px;
+}
+
+.sun::after {
+    content: "";
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    background: #e9c46a;
+    transform: translate(0, -50%);
+    width: 40px;
+    height: 16px;
+
+    border-radius: 8px;
+}
+
+.sun span::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    background: #e9c46a;
+    transform: translate(-50%, 0);
+    height: 40px;
+    width: 16px;
+    border-radius: 8px;
+}
+
+.sun span::after {
+    content: "";
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    background: #e9c46a;
+    transform: translate(-50%, 0);
+    height: 40px;
+    width: 16px;
+    border-radius: 8px;
+}
+
+
+@keyframes sunMove {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.car {
+    position: absolute;
+    bottom: 20vh;
+    right: -160px;
+    z-index: 3;
+
+    width: 400px;
+    height: 160px;
+
+    background: #f4a261;
+    color: transparent;
+
+    border-radius: 24px 0 0 0;
+
+    animation: carMove 16s infinite;
+}
+
+.car::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 16px;
+
+    width: 80px;
+    height: 80px;
+    background: #fff;
+
+    border-radius: 16px 0 0 0;
+}
+
+.car span::before {
+    content: "";
+    position: absolute;
+    bottom: -28px;
+    left: 80px;
+
+    width: 56px;
+    height: 56px;
+    border-radius: 25%;
+
+    background: #333;
+
+    animation: bakiMove 1s infinite linear;
+}
+
+.car span::after {
+    content: "";
+    position: absolute;
+    bottom: -28px;
+    right: 80px;
+
+    width: 56px;
+    height: 56px;
+    border-radius: 25%;
+
+    background: #333;
+
+    animation: bakiMove 1s infinite linear;
+}
+
+
+@keyframes bakiMove {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes carMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-120vw, 0);
+    }
+}
