@@ -1,0 +1,123 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background: transparent;
+    z-index: 999;
+
+    transition: 0.4s;
+}
+
+.header.on {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header:hover {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header .hd_wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 80px;
+    height: 120px;
+    transition: height 0.4s;
+}
+
+.header.on .hd_wrap {
+    height: 80px;
+}
+
+.header .hd_wrap h1 img {
+    height: 40px;
+}
+
+.header .hd_wrap h1 a {
+    display: block;
+    width: 217px;
+    height: 40px;
+    background: url(../images/logo-white.svg);
+}
+
+.header.on .hd_wrap h1 a {
+    background: url(../images/logo.svg);
+}
+
+.header:hover .hd_wrap h1 a {
+    background: url(../images/logo.svg);
+}
+
+.header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    line-height: 120px;
+    color: #fff;
+}
+
+.header.on .gnb>ul>li>a {
+    line-height: 80px;
+    color: #333;
+}
+
+.header:hover .gnb>ul>li>a {
+    line-height: 80px;
+    color: #333;
+}
+
+.header .utils a {
+    color: #fff;
+}
+
+.header.on .utils a {
+    color: #333;
+}
+
+.header:hover .utils a {
+    color: #333;
+}
+
+
+#content {
+    margin-bottom: 100vh;
+}
+
+.to_top {
+    position: fixed;
+    bottom: 160px;
+    right: -80px;
+    z-index: 999;
+
+    width: 40px;
+    height: 40px;
+
+    background: #333;
+    color: #fff;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+
+.to_top.on {
+    opacity: 1;
+    visibility: visible;
+    right: 160px;
+}
