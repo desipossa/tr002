@@ -1,0 +1,195 @@
+.inner {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.default {
+    padding: 120px 0;
+}
+
+.default .title {
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.default .title h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+.test01 .title h2 {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    white-space: nowrap;
+}
+
+.test01 .title h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #333;
+}
+
+.test02 {
+    background: #f9f9f9;
+}
+
+.test02 .title h2 {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    white-space: nowrap;
+}
+
+.test02 .title h2::before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #333;
+}
+
+.test02 .title h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #333;
+}
+
+.test03 {
+    position: relative;
+}
+
+.test03::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 80px;
+    width: 1px;
+    background: #333;
+    transform: translate(0, -50%);
+}
+
+.test04 {
+    background: #f9f9f9;
+}
+
+.test04 .inner {
+    display: flex;
+    gap: 30px;
+}
+
+.test04 .inner>* {
+    position: relative;
+    flex: 1;
+}
+
+.test04 .inner .itm::before {
+    content: attr(data-num);
+    position: absolute;
+    top: -8px;
+    left: -8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* text-align: center;
+    line-height: 40px; */
+
+    width: 40px;
+    height: 40px;
+    background: tomato;
+    color: #fff;
+}
+
+.test04 .inner img {
+    width: 100%;
+    height: 270px;
+    background: #333;
+}
+
+
+.test05 {
+    background: #f1f1f1;
+}
+
+.test05 .itm {
+    position: relative;
+    display: block;
+    background: #fff;
+    margin-bottom: 8px;
+    padding: 32px;
+}
+
+.test05 .itm::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 1px solid tomato;
+    border-left: 1px solid tomato;
+
+    transition: 0.2s;
+
+    visibility: hidden;
+}
+
+.test05 .itm:hover::before {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
+.test05 .itm::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 1px solid tomato;
+    border-right: 1px solid tomato;
+
+    transition: 0.2s 0.2s;
+
+    visibility: hidden;
+}
+
+.test05 .itm:hover::after {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
+
+.footer {
+    background: #f5f5f5;
+}
+
+.footer .customer {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.footer .customer li {
+    position: relative;
+}
+
+.footer .customer li~li::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 0.5em;
+
+    background: #999;
+}
