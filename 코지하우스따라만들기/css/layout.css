@@ -1,0 +1,38 @@
+.inner {
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+.default {
+    padding: 80px 0;
+}
+
+.default .title {
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+.default .title h2 {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: "Noto Serif KR", serif;
+}
+
+.default .title p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+
+.default_btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    height: 40px;
+    background: #362f2c;
+    color: #fff;
+
+    border-radius: 8px;
+    white-space: nowrap;
+
+}
