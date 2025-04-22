@@ -10,6 +10,7 @@
 .default .title {
     max-width: 1290px;
     margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 .default .title h2 {

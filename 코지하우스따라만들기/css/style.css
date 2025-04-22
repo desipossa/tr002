@@ -138,3 +138,77 @@
 .main_visual .slg a {
     margin-top: 16px;
 }
+
+.main_menu .swiper-wrapper {
+    transition-timing-function: linear;
+}
+
+.main_menu .slide_wrap .itm img {
+    transform: scale(0.9);
+    transition: 0.4s;
+}
+
+.main_menu .slide_wrap .itm img:hover {
+    transform: scale(1);
+}
+
+.main_menu .slide_wrap .itm strong {
+    display: block;
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.main_menu .slide_wrap .itm p {
+    text-align: center;
+}
+
+.main_menu .btn_wrap {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.main_info {
+    background: #f9f9f9;
+}
+
+.main_info .inner {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main_info .title h2 span {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main_info .inner .left {
+    flex: 1;
+}
+
+.main_info .inner .right {
+    flex: 3;
+
+    display: flex;
+    gap: 30px;
+}
+
+.main_info .inner .right .itm {
+    flex: 1;
+
+    border-top: 1px solid #333;
+    padding-top: 64px;
+}
+
+.main_info .inner .right .itm strong {
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Noto Serif KR", serif;
+}
+
+.main_info .inner .right .itm p {
+    margin-top: 24px;
+}
