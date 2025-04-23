@@ -9,6 +9,30 @@ $(function () {
         },
 
         speed: 5000,
+    });
+
+    const MIS = new Swiper('.main_interior_slide', {
+        loop: true,
+        effect: 'fade',
+        pagination: {
+            el: '.main_interior .page',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.main_interior .next',
+            prevEl: '.main_interior .prev',
+        },
+    });
+
+    const MSS = new Swiper('.main_sns_slide', {
+        loop: true,
+        slidesPerView: 6,
+        spaceBetween: 8,
+        centeredSlides: true,
+        navigation: {
+            nextEl: '.main_sns .next',
+            prevEl: '.main_sns .prev',
+        },
     })
 });
 

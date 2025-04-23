@@ -266,3 +266,133 @@
     margin-bottom: 48px;
     color: #fff;
 }
+
+.main_interior .inner {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main_interior .inner>* {
+    flex: 1;
+    /* overflow: hidden; */
+    min-width: 0;
+}
+
+.main_interior .left p {
+    margin-bottom: 40px;
+}
+
+.main_interior .main_interior_slide {
+    border-radius: 40px;
+}
+
+.main_interior .main_interior_slide .itm img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.main_interior .right {
+    position: relative;
+}
+
+.main_interior .arrows {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    transform: translate(0, -50%);
+}
+
+.main_interior .arrows button {
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+
+.main_interior .arrows button svg {
+    margin-top: 2px;
+}
+
+.main_interior .arrows .prev {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.main_interior .arrows .next {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.main_interior .page {
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.main_interior .page span {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 8px;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.main_interior .page span.swiper-pagination-bullet-active {
+    width: 80px;
+}
+
+.main_sns {
+    background: #f9f9f9;
+}
+
+
+.main_sns .inner {
+    position: relative;
+}
+
+.main_sns .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+
+    width: calc(100% + 80px);
+
+}
+
+.main_sns .arrows button {
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+
+.main_sns .arrows .prev {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.main_sns .arrows .next {
+    right: 0;
+    transform: translate(50%, -50%);
+}
