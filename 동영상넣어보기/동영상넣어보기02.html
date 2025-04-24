@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유튜브 동영상 넣기01</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <style>
+        .box {
+            position: relative;
+            background: tomato;
+            width: 100%;
+            padding-bottom: 56.25%;
+        }
+
+        .box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .main_promotion {
+            padding: 120px 0;
+        }
+
+        .main_promotion .inner {
+            display: flex;
+            gap: 30px;
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        .main_promotion .inner>* {
+            flex: 1;
+        }
+
+        @media (max-width:768px) {
+            .main_promotion .inner {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <iframe width="1296" height="729" src="https://www.youtube.com/embed/2ol9odrzeoc"
+            title="J.estina Beauty. 제이에스티나 뷰티 TVC 15&quot;" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <section class="main_promotion">
+        <div class="inner">
+            <div class="left">
+                <h2>Lorem ipsum dolor sit.</h2>
+            </div>
+            <div class="right">
+                <div class="box">
+                    <iframe width="1296" height="729" src="https://www.youtube.com/embed/2ol9odrzeoc"
+                        title="J.estina Beauty. 제이에스티나 뷰티 TVC 15&quot;" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+.main_visual {
+    position: relative;
+    height: 100vh;
+}
+
+.main_visual .con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_visual .con button {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: #333;
+    border-radius: 50%;
+    font-size: 0;
+}
+
+.main_visual .con button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 40px;
+    height: 40px;
+
+    background: url(../lib/icon/feather/pause.svg) no-repeat center center/40px;
+}
+
+.main_visual .con button.on::after {
+    background: url(../lib/icon/feather/play.svg) no-repeat center center/40px;
+}
+
+.main_banner {
+    position: relative;
+    padding: 200px 0;
+    background: #333;
+}
+
+.main_banner::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: #000;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.main_banner h2 {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2em;
+}

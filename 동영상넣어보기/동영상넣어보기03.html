@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유튜브 동영상 넣기01</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+    <style>
+        .main_visual video {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            vertical-align: top;
+        }
+
+        .main_content {
+            padding: 120px 0;
+        }
+
+        .main_content .inner {
+            display: flex;
+            gap: 30px;
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        .main_content .inner>* {
+            flex: 1;
+        }
+
+        .main_content .inner video {
+            width: 100%;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('.main_content .play').on('click', function () {
+                $('.main_content video').trigger('play')
+            });
+            $('.main_content .pause').on('click', function () {
+                $('.main_content video').trigger('pause')
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="main_visual">
+        <div class="main_visual_wrap">
+            <video src="./images/main_visual.mp4" autoplay muted loop playsinline></video>
+        </div>
+    </div>
+    <section class="main_content">
+        <div class="inner">
+            <div class="left">
+                <h2>동영상 제어하기</h2>
+                <button class="play">play</button>
+                <button class="pause">pause</button>
+            </div>
+            <div class="right">
+                <video src="./images/main_visual.mp4" loop></video>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
