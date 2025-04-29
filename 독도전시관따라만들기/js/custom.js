@@ -3,7 +3,16 @@ $(function () {
         loop: true,
         parallax: true,
         speed: 1000,
-    })
+    });
+
+    $('.main_visual .prev').on('click', function () {
+        main_visual_slide.slidePrev();
+    });
+
+    $('.main_visual .next').on('click', function () {
+        main_visual_slide.slideNext();
+    });
+
 });
 
 
