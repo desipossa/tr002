@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./lib/css/fonts.css">
 
     <link rel="stylesheet" href="./lib/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./lib/css/aos.css">
 
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -17,6 +18,9 @@
 
     <script src="./lib/js/jquery-1.12.4.min.js"></script>
     <script src="./lib/js/swiper-bundle.min.js"></script>
+    <script src="./lib/js/aos.js"></script>
+
+    <script src="./lib/js/lenis.min.js"></script>
 
     <script src="./js/custom.js"></script>
 </head>
@@ -132,35 +136,80 @@
                 scroll
             </span>
         </section>
-        <section class="mm default">
-            <a href="" class="default_btn">전시안내 바로보기</a>
+
+        <section class="main_info default">
+            <h2 class="blind">메인 소개글</h2>
+            <div class="inner flx">
+                <div class="left" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="title">
+                        <h3>독도 바로알기</h3>
+                        <p>
+                            독도의 역사를 배우고, 자연을 체험하며 독도영토주권<br>
+                            수호 의지를 다질 수 있는 소중한 시간이 되기를 바랍니다.
+                        </p>
+                        <a href="" class="default_btn c">바로가기</a>
+                    </div>
+                </div>
+                <div class="right" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="title">
+                        <h3>관람안내</h3>
+                        <div class="contact">
+                            <i>
+                                <img src="./images/volume-2.svg" alt="">
+                            </i>
+                            <a href="">
+                                <strong>
+                                    044-999-6393
+                                </strong>
+                            </a>
+                            <a href="" class="lnk">관람 문의하기</a>
+                        </div>
+                    </div>
+                    <ul class="desc dot_list">
+                        <li>
+                            <strong class="tj">관 람 시 간</strong>
+                            <p>
+                                화요일-토요일 9:00 ~ 17:00<br>
+                                (점심시간 12:00~13:00, 입장마감 16:30)<br>
+                                <span>※ 관람시간은 학교 사정에 따라 변경될 수 있습니다.</span>
+                            </p>
+                        </li>
+                        <li>
+                            <strong class="tj">휴 관 안 내</strong>
+                            <p>
+                                일요일, 월요일 및 공휴일
+                            </p>
+                        </li>
+                        <li>
+                            <strong class="tj">위 치</strong>
+                            <p>
+                                세종특별자치시 새롬서로 68 새롬고등학교 1층
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
+        <section class="main_g default">
+            <div class="w_inner">
+                cxcxcx
+            </div>
+        </section>
+
         <style>
-            .mm {
-                background: var(--background-color);
-            }
-
-            .mm .default_btn {
-                color: var(--primary-color);
-                border: 3px solid var(--primary-color);
-            }
-
-            .mm .default_btn:hover {
-                color: var(--white-color);
-            }
-
-            .mm .default_btn::after {
-                background: url(../images/arrow-right-color.svg) no-repeat center center/2rem;
-            }
-
-            .mm .default_btn:hover::after {
-                background: url(../images/arrow-right.svg) no-repeat center center/2rem;
+            .w_inner {
+                max-width: calc((100% - 141rem)/2 + 141rem);
+                background: tomato;
+                margin-left: auto;
             }
         </style>
+
+
     </main>
 
 
-    <footer id="footer" style="height: 100vh;"></footer>
+    <footer id="footer"></footer>
+
 </body>
 
 </html>

@@ -26,4 +26,17 @@ $(function () {
             $('#header').removeClass('on');
         }
     });
-})
+});
+
+
+$(function () {
+    const lenis = new Lenis({
+        autoRaf: true,
+        duration: 2,
+    });
+});
+
+
+$(function () {
+    AOS.init();
+});

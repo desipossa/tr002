@@ -315,3 +315,78 @@ body {
         transform: scale(1.2);
     }
 }
+
+.main_info {}
+
+.main_info .inner>* {
+    padding: 7.2rem;
+}
+
+.main_info .inner .left {
+    background: var(--background-color) url(../images/img_dokdo.png) no-repeat right bottom;
+    border-radius: 3.6rem;
+}
+
+.main_info .inner .left p {
+    margin-bottom: 8rem;
+}
+
+.main_info .inner .left .default_btn {
+    height: 6.4rem;
+}
+
+.main_info .inner .right .contact {
+    display: flex;
+    align-items: center;
+    margin-top: 3.2rem;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px dashed var(--line-color);
+}
+
+.main_info .inner .right .contact i {
+    margin-right: auto;
+    padding: 1.6rem;
+    background: var(--line-color);
+    border-radius: 50%;
+}
+
+.main_info .inner .right .contact strong {
+    font-size: 4rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.main_info .inner .right .contact .lnk {
+    margin-left: 3.2rem;
+    padding: 0 1.6rem;
+    height: 4rem;
+    line-height: 4rem;
+    background: var(--body-color);
+    color: var(--white-color);
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    white-space: nowrap;
+}
+
+.main_info .inner .right .desc {
+    margin-top: 2.4rem;
+}
+
+.main_info .inner .right .desc li {
+    display: flex;
+    gap: 4rem;
+
+    margin-bottom: 0.8rem;
+}
+
+.main_info .inner .right .desc li strong {
+    flex: 0 0 8rem;
+    font-weight: 700;
+    position: relative;
+    line-height: 1.5;
+}
+
+.main_info .inner .right .desc li p {
+    flex: 1;
+    text-align: justify;
+}

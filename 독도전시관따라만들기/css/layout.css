@@ -7,6 +7,23 @@
     padding: 8rem 0;
 }
 
+.default .title h2 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.default .title h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.default .title p {
+    margin-top: 3.2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    opacity: 0.75;
+}
+
 
 
 .default_btn {
@@ -48,6 +65,23 @@
     margin-left: 8px;
     width: 1.4rem;
     height: 1.4rem;
+    background: url(../images/arrow-right.svg) no-repeat center center/2rem;
+}
+
+.default_btn.c {
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+}
+
+.default_btn.c:hover {
+    color: var(--white-color);
+}
+
+.default_btn.c::after {
+    background: url(../images/arrow-right-color.svg) no-repeat center center/2rem;
+}
+
+.default_btn.c:hover::after {
     background: url(../images/arrow-right.svg) no-repeat center center/2rem;
 }
 
@@ -99,5 +133,21 @@
     100% {
         transform: translate(-50%, 80px) scale(12);
         opacity: 0;
+    }
+}
+
+.flx {
+    display: flex;
+    gap: 3rem;
+}
+
+.flx>* {
+    flex: 1;
+}
+
+
+@media (max-width:768px) {
+    .flx {
+        flex-direction: column;
     }
 }
