@@ -163,3 +163,60 @@
         flex-direction: column;
     }
 }
+
+
+.lnk_a {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+
+    background: var(--primary-color);
+    color: var(--white-color);
+
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+
+    transform: translate(0, -50%);
+
+}
+
+.lnk_a img {
+    height: 4rem;
+    margin-bottom: 1.6rem;
+}
+
+.lnk_a::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    z-index: -1;
+    border-radius: 50%;
+    background: var(--primary-color);
+
+    opacity: 0.25;
+}
+
+.lnk_a:hover::before {
+    animation: circle 0.8s infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
