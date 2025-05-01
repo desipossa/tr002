@@ -8,6 +8,13 @@
     box-sizing: border-box;
 }
 
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
 ul {
     list-style: none;
 }
@@ -36,6 +43,7 @@ address {
 body {
     line-height: 1;
     color: #333;
+    word-break: keep-all;
 }
 
 img {

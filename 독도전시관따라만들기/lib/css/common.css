@@ -35,3 +35,10 @@
     background: var(--line-color);
     border-radius: 50%;
 }
+
+.t_cut {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -3,6 +3,18 @@
     margin: 0 auto;
 }
 
+.w_inner {
+    max-width: calc((100% - 141rem)/2 + 141rem);
+}
+
+.w_inner.r {
+    margin-left: auto;
+}
+
+.w_inner.l {
+    margin-right: auto;
+}
+
 .default {
     padding: 8rem 0;
 }

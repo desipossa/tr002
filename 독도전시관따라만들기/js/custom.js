@@ -13,6 +13,34 @@ $(function () {
         main_visual_slide.slideNext();
     });
 
+
+    const main_customer_slide = new Swiper('.main_customer_slide', {
+        loop: true,
+        slidesPerView: 2.5,
+        spaceBetween: 30,
+    });
+
+    $('.main_customer .prev').on('click', function () {
+        main_customer_slide.slidePrev();
+    });
+
+    $('.main_customer .next').on('click', function () {
+        main_customer_slide.slideNext();
+    });
+
+    let sw = true;
+    $('.main_customer .play').on('click', function () {
+        if (sw) {
+            main_customer_slide.autoplay.start();
+            $(this).addClass('on');
+        } else {
+            main_customer_slide.autoplay.pause();
+            $(this).removeClass('on');
+        }
+
+        sw = !sw;
+    });
+
 });
 
 
