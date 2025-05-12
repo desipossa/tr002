@@ -1,0 +1,59 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    height: 120px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+
+    transition: 0.4s;
+
+}
+
+.header:hover {
+    height: 240px;
+    background: #fff;
+}
+
+.header .hd_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin: 0 120px;
+
+    height: 120px;
+}
+
+.header .hd_wrap img {
+    vertical-align: middle;
+}
+
+.header .hd_wrap h1 {
+    flex: 0 0 120px;
+}
+
+.header .hd_wrap h1 a {
+    display: block;
+    line-height: 120px;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 80px;
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    line-height: 120px;
+}
+
+.header .utils a {
+    display: block;
+    line-height: 120px;
+}

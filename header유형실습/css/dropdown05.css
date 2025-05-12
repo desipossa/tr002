@@ -1,0 +1,61 @@
+.header {
+    position: relative;
+}
+
+.header .hd_wrap {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 80px;
+    height: 80px;
+}
+
+.header .hd_wrap h1 {
+    flex: 0 0 120px;
+}
+
+.header .gnb>ul {
+    display: flex;
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    line-height: 80px;
+    padding: 0 24px;
+}
+
+.header .gnb>ul>li .sub {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    background: #fff;
+
+    height: 0;
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+.header .gnb>ul>li:hover .sub {
+    height: 600px;
+}
+
+.header .gnb>ul>li .sub .sub_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 80px;
+
+    padding: 80px 0;
+
+    height: 600px;
+}
+
+.header .gnb>ul>li .sub .sub_wrap .left ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 80px;
+}
