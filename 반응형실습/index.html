@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <link rel="stylesheet" href="./lib/css/fonts.css">
+
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.hd button').on('click', function () {
+                $('.gnb').toggleClass('on')
+            })
+        })
+    </script>
+    <style>
+        .hd button {
+            background: tomato;
+            display: none;
+        }
+
+        .gnb {
+            display: flex;
+            gap: 40px;
+        }
+
+        .gnb>a {
+            display: block;
+            line-height: 120px;
+        }
+
+        .default {
+            padding: 120px 0;
+            background: tomato;
+
+        }
+
+        .default .inner {
+            display: flex;
+            gap: 30px;
+
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        .default .inner>* {
+            flex: 1;
+        }
+
+        .itm {
+            background: tan;
+        }
+
+        @media(max-width:1200px) {
+            .hd button {
+                background: black;
+                display: block;
+
+                /* r */
+                position: fixed;
+                top: 16px;
+                right: 16px;
+                z-index: 999;
+            }
+
+            .default .inner {
+                margin: 0 16px;
+            }
+        }
+
+
+        @media(max-width:768px) {
+            .gnb {
+                display: flex;
+                gap: 40px;
+
+                /* r */
+                position: fixed;
+                top: 0;
+                left: -100%;
+                z-index: 999;
+
+                flex-direction: column;
+                gap: 0;
+
+                background: #fff;
+
+                height: 100vh;
+                width: calc(100% - 80px);
+                padding: 160px 24px 0 24px;
+
+                transition: 0.4s;
+            }
+
+            .gnb.on {
+                left: 0;
+            }
+
+            .gnb>a {
+                display: block;
+                line-height: 120px;
+
+                /* r */
+                line-height: 40px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .default {
+                padding: 120px 0;
+            }
+
+            .default .inner {
+                display: flex;
+                gap: 30px;
+
+                max-width: 1170px;
+
+
+                /* r */
+                flex-direction: column;
+                gap: 24px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hd">
+        <nav class="gnb">
+            <a href="">menu</a>
+            <a href="">menu</a>
+            <a href="">menu</a>
+            <a href="">menu</a>
+            <a href="">menu</a>
+            <a href="">menu</a>
+            <a href="">menu</a>
+        </nav>
+        <button>
+            <img src="./images/arrow-right.svg" alt="">
+        </button>
+    </header>
+    <section class="default">
+        <div class="inner">
+            <div class="itm">
+                <figure>
+                    <img src="./images/img_visual01.jpg" alt="">
+                </figure>
+                <p>01 Lorem ipsum dolor sit.</p>
+            </div>
+            <div class="itm">
+                <figure>
+                    <img src="./images/img_visual01.jpg" alt="">
+                </figure>
+                <p>02 Lorem ipsum dolor sit.</p>
+            </div>
+            <div class="itm">
+                <figure>
+                    <img src="./images/img_visual01.jpg" alt="">
+                </figure>
+                <p>03 Lorem ipsum dolor sit.</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

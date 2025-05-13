@@ -1,0 +1,117 @@
+.inner {
+    max-width: 1410px;
+    margin: 0 auto;
+}
+
+@media (max-width:1442px) {
+    .inner {
+        margin: 0 16px;
+    }
+}
+
+.default {
+    padding: 120px 0;
+}
+
+.default.bg {
+    background: #f9f9f9;
+}
+
+.flx {
+    display: flex;
+    gap: 30px;
+}
+
+.flx>* {
+    flex: 1;
+}
+
+.flx img {
+    width: 100%;
+}
+
+
+@media (max-width:540px) {
+    .flx {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.mbtn {
+    display: none;
+}
+
+@media (max-width:768px) {
+    .mbtn {
+        /*  */
+        display: block;
+        position: fixed;
+        top: 40px;
+        right: 16px;
+        z-index: 999;
+
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border: 1px solid #ddd;
+
+        font-size: 0;
+    }
+
+    .mbtn::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 4px;
+        right: 4px;
+        height: 2px;
+        background: #333;
+    }
+
+    .mbtn.on::before {
+        display: none;
+    }
+
+    .mbtn::after {
+        content: "";
+        position: absolute;
+        bottom: 8px;
+        left: 4px;
+        right: 4px;
+        height: 2px;
+        background: #333;
+    }
+
+    .mbtn.on::after {
+        display: none;
+    }
+
+    .mbtn span::before {
+        content: "";
+        position: absolute;
+        top: 18px;
+        left: 4px;
+        right: 4px;
+        height: 2px;
+        background: #333;
+    }
+
+    .mbtn.on span::before {
+        transform: rotate(45deg);
+    }
+
+    .mbtn span::after {
+        content: "";
+        position: absolute;
+        top: 18px;
+        left: 4px;
+        right: 4px;
+        height: 2px;
+        background: #333;
+    }
+
+    .mbtn.on span::after {
+        transform: rotate(-45deg);
+    }
+}
