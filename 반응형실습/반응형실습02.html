@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형실습 02</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <link rel="stylesheet" href="./lib/css/fonts.css">
+
+
+
+
+</head>
+
+<body>
+
+    <section class="main_content">
+        <div class="inner">
+            <div class="itm">
+                <figure>
+                    <img src="./images/img_visual01.jpg" alt="">
+                </figure>
+            </div>
+            <div class="itm">
+                <figure>
+                    <img src="./images/img_visual01.jpg" alt="">
+                </figure>
+            </div>
+            <div class="itm">
+                <figure>
+                    <img src="./images/img_visual01.jpg" alt="">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-size: 1.6rem;
+        }
+
+        .main_content {
+            padding: 12rem 0;
+        }
+
+        .main_content .inner {
+            display: flex;
+            gap: 3rem;
+            max-width: 141rem;
+            margin: 0 auto;
+        }
+
+        @media (max-width:1442px) {
+            .main_content .inner {
+                margin: 0 1.6rem;
+            }
+        }
+
+
+        @media (max-width:540px) {
+            .main_content .inner {
+                flex-direction: column;
+                gap: 4rem;
+            }
+        }
+
+        .main_content .inner>* {
+            flex: 1;
+        }
+
+        .main_content .inner>* img {
+            width: 100%;
+        }
+    </style>
+
+</body>
+
+</html>

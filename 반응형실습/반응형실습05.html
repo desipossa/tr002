@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형실습 05</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <link rel="stylesheet" href="./lib/css/fonts.css">
+    <link rel="stylesheet" href="./lib/css/swiper-bundle.min.css">
+
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+    <script src="./lib/js/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <section class="main_content default">
+
+
+        <div class="inner rflx">
+            <div class="left">
+                <div class="title">
+                    <h2>우리나라 대한민국</h2>
+                    <p>우리나라 대한민국 대통령은 김문수</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="main_content_slide swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide itm">
+                            <img src="./images/img_visual02.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide itm">
+                            <img src="./images/img_visual02.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide itm">
+                            <img src="./images/img_visual02.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        $(function () {
+            const main_content_slide = new Swiper('.main_content_slide')
+        })
+    </script>
+
+    <section class="main_solution default bg">
+        <div class="title">
+            <h2>우리나라 대한민국</h2>
+            <p>우리나라 대한민국 대통령은 김문수</p>
+        </div>
+
+        <div class="inner">
+            <div class="main_solution_slide swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide itm">
+                        <figure>
+                            <img src="./images/img_visual01.jpg" alt="">
+                        </figure>
+                        <strong>우리나라 대한민국 대통령은 김문수</strong>
+                    </div>
+                    <div class="swiper-slide itm">
+                        <figure>
+                            <img src="./images/img_visual01.jpg" alt="">
+                        </figure>
+                        <strong>우리나라 대한민국 대통령은 김문수</strong>
+                    </div>
+                    <div class="swiper-slide itm">
+                        <figure>
+                            <img src="./images/img_visual01.jpg" alt="">
+                        </figure>
+                        <strong>우리나라 대한민국 대통령은 김문수</strong>
+                    </div>
+                    <div class="swiper-slide itm">
+                        <figure>
+                            <img src="./images/img_visual01.jpg" alt="">
+                        </figure>
+                        <strong>우리나라 대한민국 대통령은 김문수</strong>
+                    </div>
+                </div>
+                <div class="arrows">
+                    <button class="prev">prev</button>
+                    <button class="next">next</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(function () {
+            const main_solution_slide = new Swiper('.main_solution_slide', {
+
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    enabled: true,
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+
+
+                breakpoints: {
+                    541: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        autoplay: {
+                            enabled: false,
+                        },
+                    }
+                },
+
+                navigation: {
+                    nextEl: '.main_solution .arrows .next',
+                    prevEl: '.main_solution .arrows .prev',
+                },
+            })
+        })
+    </script>
+
+
+    <section class="main_event default">
+        <div class="title">
+            <h2>우리나라 대한민국</h2>
+            <p>우리나라 대한민국 대통령은 김문수</p>
+        </div>
+
+        <div class="inner rflx">
+            <div class="itm">
+                <figure>
+                    <img src="./images/img_visual01.jpg" alt="">
+                </figure>
+                <strong>우리나라 대한민국 대통령은 김문수</strong>
+            </div>
+            <div class="itm">
+                <figure>
+                    <img src="./images/img_visual01.jpg" alt="">
+                </figure>
+                <strong>우리나라 대한민국 대통령은 김문수</strong>
+            </div>
+            <div class="itm">
+                <figure>
+                    <img src="./images/img_visual01.jpg" alt="">
+                </figure>
+                <strong>우리나라 대한민국 대통령은 김문수</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- layout -->
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1.6rem;
+        }
+
+        .inner {
+            max-width: 141rem;
+            margin: 0 auto;
+        }
+
+        @media (max-width:1442px) {
+            .inner {
+                max-width: 141rem;
+                margin: 0 auto;
+
+                /*  */
+                margin: 0 1.6rem;
+            }
+        }
+
+
+        .default {
+            padding: 12rem 0;
+        }
+
+        .default.bg {
+            background: #f9f9f9;
+        }
+
+        .default .title {
+            max-width: 141rem;
+            margin: 0 auto;
+            margin-bottom: 4rem;
+        }
+
+        .default .title h2 {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        .default .title p {
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-top: 2.4rem;
+        }
+
+
+        @media (max-width:1442px) {
+            .default {
+                padding: 12rem 0;
+            }
+
+            .default.bg {
+                background: #f9f9f9;
+            }
+
+            .default .title {
+                max-width: 141rem;
+                margin: 0 auto;
+                margin-bottom: 4rem;
+
+                /* r */
+                margin: 0 1.6rem;
+                margin-bottom: 4rem;
+            }
+
+            .default .title h2 {
+                font-size: 4rem;
+                font-weight: 700;
+            }
+
+            .default .title p {
+                font-size: 1.6rem;
+                font-weight: 400;
+                margin-top: 2.4rem;
+            }
+        }
+
+        .rflx {
+            display: flex;
+            gap: 4rem 3rem;
+        }
+
+        .rflx>* {
+            flex: 1;
+        }
+
+        @media (max-width:540px) {
+            .rflx {
+                display: flex;
+                gap: 4rem 3rem;
+
+                /* r */
+                flex-direction: column;
+            }
+
+            .rflx>* {
+                flex: 1;
+            }
+        }
+    </style>
+
+    <!-- style -->
+    <style>
+        .main_content .right {
+            /* overflow: hidden; */
+            min-width: 0;
+        }
+
+        /* 반응형에서 flex 되어있는 box 가 늘어날 때  */
+
+        @media (max-width:540px) {
+            .main_content .inner {
+                display: block;
+            }
+
+            .main_content .left {
+                margin-bottom: 4rem;
+            }
+
+            .main_content .title {
+                margin: 0 0;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+
+</body>
+
+</html>
