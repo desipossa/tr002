@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 메뉴실습 03</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <link rel="stylesheet" href="./lib/css/fonts.css">
+    <link rel="stylesheet" href="./lib/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./lib/css/hamburgers.css">
+
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+    <script src="./lib/js/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="hd_wrap">
+            <h1><a href="/">LOGO</a></h1>
+
+
+
+
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <a href="">menu01</a>
+                        <ul>
+                            <li><a href="">smenu01</a></li>
+                            <li><a href="">smenu01</a></li>
+                            <li><a href="">smenu01</a></li>
+                            <li><a href="">smenu01</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">menu02</a>
+                        <ul>
+                            <li><a href="">smenu01</a></li>
+                            <li><a href="">smenu01</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">menu03</a>
+                        <ul>
+                            <li><a href="">smenu01</a></li>
+                            <li><a href="">smenu01</a></li>
+                            <li><a href="">smenu01</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">menu04</a>
+                        <ul>
+                            <li><a href="">smenu01</a></li>
+                            <li><a href="">smenu01</a></li>
+                            <li><a href="">smenu01</a></li>
+                            <li><a href="">smenu01</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">menu05</a>
+                        <ul>
+                            <li><a href="">smenu01</a></li>
+                            <li><a href="">smenu01</a></li>
+                            <li><a href="">smenu01</a></li>
+                            <li><a href="">smenu01</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mbtn">
+                menu
+            </button>
+
+
+
+
+
+            <div class="utils">
+                <a href="">icon</a>
+            </div>
+        </div>
+    </header>
+    <main id="content"></main>
+    <footer id="footer"></footer>
+
+
+    <style>
+        #header {}
+
+        #header .hd_wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 80px;
+
+            height: 120px;
+
+        }
+
+        .gnb>ul {
+            display: flex;
+            gap: 40px;
+        }
+
+        .gnb>ul>li {
+            position: relative;
+        }
+
+        .gnb>ul>li>a {
+            display: block;
+            line-height: 120px;
+        }
+
+        .gnb>ul>li ul {
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            z-index: 2;
+
+            background: #fff;
+            border: 1px solid #ddd;
+
+            transform: translate(-50%, 0);
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: 0.4s;
+
+        }
+
+        .gnb>ul>li:hover ul {
+            opacity: 1;
+            visibility: visible;
+
+            transform: translate(-50%, -16px);
+        }
+
+        .gnb>ul>li ul li a {
+            display: block;
+            padding: 0 32px;
+            line-height: 40px;
+        }
+
+        .gnb>ul>li ul li~li a {
+            border-top: 1px solid #ddd;
+        }
+
+        .mbtn {
+            display: none;
+        }
+
+
+        @media (max-width:768px) {
+            #header {}
+
+            #header .hd_wrap {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 80px;
+
+                height: 120px;
+
+            }
+
+            /*  */
+            .gnb {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                z-index: 999;
+
+                background: #fff;
+                border-right: 1px solid #ddd;
+
+                height: 200vh;
+                width: calc(100% - 80px);
+
+                padding: 120px 24px 0 24px;
+            }
+
+            .gnb.on {
+                left: 0;
+            }
+
+            .gnb>ul {
+                display: flex;
+                gap: 40px;
+
+                /*  */
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .gnb>ul>li {
+                position: relative;
+            }
+
+            .gnb>ul>li>a {
+                display: block;
+                line-height: 120px;
+
+                /*  */
+                line-height: 40px;
+            }
+
+            .gnb>ul>li ul {
+                position: absolute;
+                top: 120px;
+                left: 50%;
+                z-index: 2;
+
+                background: #fff;
+                border: 1px solid #ddd;
+
+                transform: translate(-50%, 0);
+
+                opacity: 0;
+                visibility: hidden;
+
+                transition: 0.4s;
+
+                /*  */
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0, 0);
+
+                transition: none;
+
+                display: none;
+
+            }
+
+            .gnb>ul>li:hover ul {
+                opacity: 1;
+                visibility: visible;
+
+                transform: translate(-50%, -16px);
+
+                /*  */
+                transform: translate(0, 0);
+                display: none;
+            }
+
+            .gnb>ul>li ul li a {
+                display: block;
+                padding: 0 32px;
+                line-height: 40px;
+            }
+
+            .gnb>ul>li ul li~li a {
+                border-top: 1px solid #ddd;
+            }
+
+            .mbtn {
+                display: none;
+
+                /* r */
+                display: block;
+                position: fixed;
+                top: 40px;
+                right: 16px;
+                z-index: 999;
+            }
+        }
+
+        #footer {
+            position: relative;
+            z-index: 1;
+            background: #333;
+            height: 200vh;
+        }
+    </style>
+
+    <script>
+        $(function () {
+
+            $('.mbtn').on('click', function () {
+                $('.gnb').toggleClass('on')
+            });
+
+            $('.gnb>ul>li>a').on('click', function (e) {
+                if ($('.gnb').hasClass('on') && $(this).next().is('ul')) {
+                    e.preventDefault();
+                    $('.gnb>ul>li ul').stop().slideUp();
+                    $(this).next().stop().slideToggle();
+                }
+            });
+
+            $(window).on('resize', function () {
+                let ww = $(window).width();
+                if (ww > 768) {
+                    $('.gnb').removeClass('on');
+                    $('.gnb>ul>li ul').removeAttr('style');
+                }
+            })
+        })
+
+    </script>
+
+
+
+</body>
+
+</html>

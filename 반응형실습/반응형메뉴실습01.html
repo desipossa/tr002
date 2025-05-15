@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 메뉴실습 01</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <link rel="stylesheet" href="./lib/css/fonts.css">
+    <link rel="stylesheet" href="./lib/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./lib/css/hamburgers.css">
+
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+    <script src="./lib/js/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="hd_wrap">
+            <h1><a href="/">LOGO</a></h1>
+
+
+
+
+            <nav class="gnb">
+                <ul>
+                    <li><a href="">menu01</a></li>
+                    <li><a href="">menu02</a></li>
+                    <li><a href="">menu03</a></li>
+                    <li><a href="">menu04</a></li>
+                    <li><a href="">menu05</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger hamburger--elastic mbtn" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+
+
+
+
+            <div class="utils">
+                <a href="">icon</a>
+            </div>
+        </div>
+    </header>
+    <main id="content"></main>
+    <footer id="footer"></footer>
+
+    <style>
+        #header {
+            background: #ddd;
+        }
+
+        #header .hd_wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1410px;
+            margin: 0 auto;
+
+            height: 120px;
+        }
+
+        .gnb {}
+
+        .gnb>ul {
+            display: flex;
+            gap: 40px;
+        }
+
+        .gnb>ul>li>a {
+            display: block;
+            line-height: 120px;
+        }
+
+        .mbtn {
+            display: none;
+        }
+
+
+        @media (max-width:1442px) {
+            #header {
+                background: #ddd;
+            }
+
+            #header .hd_wrap {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1410px;
+                margin: 0 auto;
+
+                height: 120px;
+
+                /* r */
+                margin: 0 16px;
+            }
+
+            .gnb {}
+
+            .gnb>ul {
+                display: flex;
+                gap: 40px;
+            }
+
+            .gnb>ul>li>a {
+                display: block;
+                line-height: 120px;
+            }
+        }
+
+
+        @media (max-width:768px) {
+            #header {
+                background: #ddd;
+            }
+
+            /*  */
+            #header h1.on {
+                position: fixed;
+                left: 24px;
+                z-index: 1000;
+            }
+
+            #header .hd_wrap {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1410px;
+                margin: 0 auto;
+
+                height: 120px;
+
+                /* r */
+                margin: 0 16px;
+            }
+
+            /*  */
+            .gnb {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                z-index: 999;
+
+                background: #fff;
+                height: 200vh;
+                width: calc(100% - 120px);
+
+                padding: 120px 24px 0 24px;
+
+                transition: left 0.4s;
+            }
+
+            .gnb.on {
+                left: 0;
+            }
+
+            .mbtn {
+                display: none;
+
+                /*  */
+                display: block;
+
+                position: fixed;
+                top: 40px;
+                right: 16px;
+                z-index: 999;
+            }
+
+            .hamburger {
+                padding: 0 0;
+            }
+
+
+            .hamburger-box {
+                width: 32px;
+            }
+
+            .hamburger-inner,
+            .hamburger-inner::before,
+            .hamburger-inner::after {
+                width: 32px;
+                height: 2px;
+            }
+
+            .gnb>ul {
+                display: flex;
+                gap: 40px;
+
+                /*  */
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .gnb>ul>li>a {
+                display: block;
+                line-height: 120px;
+
+                /*  */
+                line-height: 40px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            #header .utils {
+                display: none;
+            }
+        }
+
+        #footer {
+            background: #333;
+            height: 200vh;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            $('.mbtn').on('click', function () {
+                $(this).toggleClass('is-active')
+                $('.gnb').toggleClass('on');
+                $('#header h1').toggleClass('on')
+            })
+        })
+    </script>
+</body>
+
+</html>
