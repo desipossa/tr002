@@ -1,0 +1,113 @@
+.inner {
+    max-width: 1410px;
+    margin: 0 auto;
+}
+
+
+
+
+
+.header {}
+
+.header h1 {
+    position: fixed;
+    top: 80px;
+    left: 80px;
+    z-index: 999;
+}
+
+.header .gnb {
+    position: fixed;
+    top: 50%;
+    right: 80px;
+    z-index: 999;
+
+    transform: translate(0, -50%);
+}
+
+.header .gnb>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.header .gnb a {
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+
+    text-align: right;
+}
+
+.header .gnb ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    background: #333;
+    border-radius: 50%;
+}
+
+.header .gnb ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 40px;
+    height: 40px;
+    border: 0px solid #333;
+    border-radius: 50%;
+}
+
+.header .gnb ul li.on a::after {
+    border: 2px solid #333;
+}
+
+.header .cbtn {
+    position: fixed;
+    top: 80px;
+    right: 80px;
+    z-index: 999;
+}
+
+.section img {
+    width: 400px;
+    height: 600px;
+    background: #333;
+}
+
+.section .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.section .inner .mockup {
+    transform: translate(-120px, 0);
+    opacity: 0;
+}
+
+.section.on .inner .mockup {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.section .inner .desc {
+    transform: translate(0, 120px);
+    opacity: 0;
+}
+
+.section.on .inner .desc {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 0.4s 0.4s;
+}
