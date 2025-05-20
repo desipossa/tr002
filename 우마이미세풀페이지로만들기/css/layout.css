@@ -1,0 +1,31 @@
+.inner {
+    max-width: 1410px;
+    margin: 0 auto;
+}
+
+.default .title h2 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.default .title p {
+    margin-top: 24px;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.default_btn {
+    display: inline-flex;
+    align-items: center;
+    height: 56px;
+    padding: 0 32px;
+
+    border: 2px solid #f57442;
+    border-radius: 28px;
+    color: #f57442;
+}
+
+.default_btn:hover {
+    background: #fff;
+    color: #333;
+}

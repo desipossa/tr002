@@ -1,6 +1,7 @@
 $(function () {
 
     let tl = gsap.timeline();
+    tl.from({}, {})
     tl.from('.intro h2', { x: 1000, opacity: 0 })
     tl.from('.intro p', { x: 1000, opacity: 0 })
 
@@ -9,7 +10,7 @@ $(function () {
         anchors: ['intro', 'portfolio01', 'portfolio02', 'portfolio03', 'profile'],
         fixedElements: '.header',
         afterLoad: function (a, b) {
-            console.log(a, b);
+
             $('.gnb ul li').removeClass('on');
             $('.gnb ul li').eq(b - 1).addClass('on');
 
@@ -17,10 +18,14 @@ $(function () {
             $('.section').removeClass('on');
             $('.section').eq(b - 1).addClass('on');
 
+
+        },
+
+        onLeave: function (a, b) {
             if (b === 1) {
                 tl.restart();
             }
-        },
+        }
     });
 
 
