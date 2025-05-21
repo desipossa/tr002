@@ -142,6 +142,7 @@
 #main_solution .main_solution_slide .itm {
     position: relative;
     max-width: 880px;
+    margin: 0 auto;
 
     transform: scale(0.9);
     border-radius: 0;
