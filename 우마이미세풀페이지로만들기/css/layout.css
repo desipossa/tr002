@@ -8,10 +8,22 @@
     font-weight: 400;
 }
 
+.default .title.w h2 {
+    color: #fff;
+}
+
 .default .title p {
     margin-top: 24px;
     font-size: 15px;
     line-height: 24px;
+}
+
+.default .title.w p {
+    color: #fff;
+}
+
+.default .lnk {
+    margin-top: 40px;
 }
 
 .default_btn {
