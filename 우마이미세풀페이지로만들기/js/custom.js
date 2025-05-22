@@ -17,7 +17,7 @@ $(function () {
             if (d == 1) {
                 tl.restart();
             }
-            if (d == 2 || d == 4) {
+            if (d == 2 || d == 4 || d == 6 || d == 7 || d == 8) {
                 $('#header').addClass('on')
             } else {
                 $('#header').removeClass('on')
@@ -58,3 +58,62 @@ $(function () {
     })
 
 });
+
+
+$(function () {
+    $('#main_story .tab_menu li button').on('click', function () {
+        let idx = $(this).parent().index();
+        console.log(idx);
+
+        $('#main_story .tab_menu li button').removeClass('on');
+        $(this).addClass('on');
+
+        $('#main_story .tab_content .itm').removeClass('on')
+        $('#main_story .tab_content .itm').eq(idx).addClass('on')
+    });
+
+
+    const main_story_slide01 = new Swiper('.main_story_slide01', {
+        loop: true,
+        slidesPerView: 3.5,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '#main_story .itm01 .arrows .next',
+            prevEl: '#main_story .itm01 .arrows .prev',
+        },
+    })
+    const main_story_slide02 = new Swiper('.main_story_slide02', {
+        loop: true,
+        slidesPerView: 3.5,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '#main_story .itm02 .arrows .next',
+            prevEl: '#main_story .itm02 .arrows .prev',
+        },
+    })
+    const main_story_slide03 = new Swiper('.main_story_slide03', {
+        loop: true,
+        slidesPerView: 3.5,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '#main_story .itm03 .arrows .next',
+            prevEl: '#main_story .itm03 .arrows .prev',
+        },
+    })
+});
+
+
+$(function () {
+    const main_event_slide01 = new Swiper('.main_event_slide01', {
+        direction: 'vertical',
+        loop: true,
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 30,
+        speed: 2000,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        },
+    })
+})
