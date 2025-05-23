@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>우마이미세 다시 만들기</title>
+
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
     <link rel="stylesheet" href="./lib/css/reset.css">
     <link rel="stylesheet" href="./lib/css/common.css">
     <link rel="stylesheet" href="./lib/css/fonts.css">
@@ -32,7 +35,7 @@
 <body>
     <div id="full_wrap">
         <header id="header">
-            <div class="inner">
+            <div class="hd_wrap">
                 <h1>
                     <a href="/">
                         <span class="blind">우마이미세</span>
@@ -53,8 +56,13 @@
 
         <aside class="side_lnk">
             <ul>
-                <li><a href="#intro">intro</a></li>
+                <li class="on"><a href="#intro">intro</a></li>
                 <li><a href="#store">store</a></li>
+                <li><a href="#banner">banner</a></li>
+                <li><a href="#solution">solution</a></li>
+                <li><a href="#promotion">promotion</a></li>
+                <li><a href="#story">story</a></li>
+                <li><a href="#event">event</a></li>
                 <li><a href="#customer">customer</a></li>
             </ul>
         </aside>
@@ -502,11 +510,40 @@
                 </div>
             </div>
             <div class="ft_bottom">
-                &copy .
+                <div class="ft_wrap">
+                    <div class="left">
+                        <ul class="customer">
+                            <li>상호 : 우마이미세</li>
+                            <li>대표자 : 안병대</li>
+                            <li>소재지 : 부산광역시 해운대구 센텀중앙로 90, 20층 2003호</li>
+                            <li>사업자등록번호 : 576-86-03376</li>
+                            <li>대표번호 : 1899-6683 (주중 10:00-18:00)</li>
+                        </ul>
+                        <address>
+                            Copyright ⓒ 2023 우마이미세 All rights reserved.
+                        </address>
+                    </div>
+                    <div class="right">
+                        <div class="ft_lnk">
+                            <ul>
+                                <li><a href="">Brand</a></li>
+                                <li><a href="">Franchise</a></li>
+                                <li><a href="">Store</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="" target="_blank">INSTAGRAM</a>
+                    </div>
+                </div>
             </div>
         </footer>
 
-        <a href="#intro" class="to_top">위로</a>
+        <a href="#intro" class="to_top">
+            <svg width="24" height="24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <use href="./lib/icon/feather-sprite.svg#arrow-up" />
+            </svg>
+        </a>
     </div>
 </body>
 
