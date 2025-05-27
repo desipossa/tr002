@@ -11,6 +11,14 @@
     display: flex;
 }
 
+.flx.gap30 {
+    gap: 30px;
+}
+
+.flx.gap8 {
+    gap: 8px;
+}
+
 .flx>* {
     flex: 1;
 }
