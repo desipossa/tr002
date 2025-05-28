@@ -47,18 +47,21 @@
 
 .dot_list>* {
     position: relative;
-    padding-left: 1.6rem;
+    padding-left: 24px;
+
+    line-height: 40px;
+    border-bottom: 1px solid #ddd;
 }
 
 .dot_list>*::before {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 16px;
     left: 0;
 
     width: 4px;
     height: 4px;
-    background: var(--line-color);
+    background: #ddd;
     border-radius: 50%;
 }
 
