@@ -14,3 +14,9 @@ $(function () {
         },
     })
 })
+
+$(function () {
+    $('.mbtn').on('click', function () {
+        $('#header .gnb').toggleClass('on');
+    })
+})

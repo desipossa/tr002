@@ -33,7 +33,6 @@
     width: 100%;
 }
 
-
 @media (max-width:768px) {
     .flx {
         flex-direction: column;
@@ -46,6 +45,7 @@
     .flx.gap8 {
         gap: 24px;
     }
+
 }
 
 .hr {
