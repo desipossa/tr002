@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+
+
+    <style>
+        .case {
+            display: flex;
+            justify-content: flex-end;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 240px;
+
+            background: tomato;
+        }
+
+        .case .fl {
+            position: relative;
+            width: 120px;
+        }
+
+        .case .fl ul {
+            position: absolute;
+            bottom: 16px;
+            left: 0;
+            right: 0;
+
+            background: #fff;
+            border: 2px solid #ddd;
+
+            display: none;
+        }
+
+        .case .fl ul li a {
+            display: block;
+            line-height: 40px;
+            padding: 0 24px;
+        }
+
+        .case .fl ul li~li a {
+            border-top: 1px solid #ddd;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            $('.fl>a').on('click', function (e) {
+                e.preventDefault();
+                $(this).next().slideToggle()
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="case">
+        <div class="fl">
+            <a href="">FAMILY LINK</a>
+            <ul>
+                <li><a href="">naver</a></li>
+                <li><a href="">daum</a></li>
+                <li><a href="">google</a></li>
+            </ul>
+        </div>
+        <div class="fl">
+            <a href="">lang</a>
+            <ul>
+                <li><a href="">ko</a></li>
+                <li><a href="">en</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

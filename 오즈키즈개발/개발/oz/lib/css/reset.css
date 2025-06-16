@@ -1,0 +1,64 @@
+* {
+    font-size: inherit;
+    font-weight: inherit;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    /* ,친거는 그리고 라는 뜻이다. */
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+em {
+    font-style: normal;
+}
+
+i {
+    font-style: normal;
+}
+
+address {
+    font-style: normal;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+
+    word-break: keep-all;
+    /* 단어 자체로 잘라서 내려오는 명령어. */
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+button {
+    background: transparent;
+    border: none;
+    border: 0;
+    cursor: pointer;
+}
+
+p {
+    line-height: 1.5;
+}

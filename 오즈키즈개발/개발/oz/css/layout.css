@@ -1,0 +1,154 @@
+.inner {
+    max-width: 141rem;
+    margin: 0 auto;
+}
+
+@media (max-width:1442px) {
+    .inner {
+        margin: 0 1.6rem;
+    }
+}
+
+.default {
+    text-align: center;
+    padding: 8rem 0;
+}
+
+.default img {}
+
+.default h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+}
+
+.default p {
+    display: block;
+    margin-bottom: 6.4rem;
+}
+
+.default .itm strong {
+    display: block;
+    /*박스가 아니니까 디스플레이 블럭으로 박스를 만들어준다.*/
+    text-align: center;
+    margin-top: 1.6rem;
+    margin-bottom: 8px;
+}
+
+.default .itm img {
+    border-radius: 2.4rem;
+    overflow: hidden;
+}
+
+.default .itm p {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+}
+
+.default .itm em {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+
+.default_btn {
+    /*디폴트 버튼을 만들어놓고 계속 사용할거다.*/
+    display: inline-flex;
+    align-items: center;
+    padding: 0 2.4rem;
+    /*top 0 right 24 bottom 0 left 24*/
+    height: 4rem;
+    color: #fff;
+    opacity: 0.9;
+    background: #A67C52;
+
+    border-radius: 8px;
+    /*모서리 둥글게*/
+    white-space: nowrap;
+    /*글자 한줄로*/
+    margin-top: 4.8rem;
+}
+
+.flx {
+    display: flex;
+}
+
+.flx>* {
+    flex: 1;
+}
+
+.flx img {
+    width: 100%;
+}
+
+@media (max-width:1442px) {
+    .default {
+        padding: 12rem 0;
+    }
+
+    .default img {}
+
+    .default h2 {
+        font-size: 4rem;
+        font-weight: 600;
+        margin-bottom: 1.6rem;
+    }
+
+    .default p {
+        display: block;
+        margin-bottom: 6.4rem;
+    }
+
+    .default .itm strong {
+        display: block;
+        /*박스가 아니니까 디스플레이 블럭으로 박스를 만들어준다.*/
+        text-align: center;
+        margin-top: 1.6rem;
+        margin-bottom: 8px;
+    }
+
+    .default .itm img {
+        border-radius: 2.4rem;
+        overflow: hidden;
+    }
+
+    .default .itm p {
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 3.2rem;
+    }
+
+    .default .itm em {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+
+    .rflx {
+        /* 반응형에 쓸거여서 rflx로 적었다. */
+        display: flex;
+        gap: 4rem 3rem;
+    }
+
+    .rflx>* {
+        flex: 1;
+    }
+}
+
+@media (max-width:768px) {
+    .rflx {
+        display: flex;
+        gap: 4rem 3rem;
+
+        /*  */
+        flex-direction: column;
+    }
+
+    .rflx>* {
+        flex: 1;
+    }
+}

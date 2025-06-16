@@ -1,0 +1,55 @@
+.inner {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+@media (max-width:768px) {
+    .inner {
+        margin: 0 16px;
+    }
+}
+
+.default {
+    padding: 80px 0;
+}
+
+.flx {
+    display: flex;
+}
+
+.flx.gap30 {
+    gap: 30px;
+}
+
+.flx.gap8 {
+    gap: 8px;
+}
+
+.flx>* {
+    flex: 1;
+}
+
+.flx img {
+    width: 100%;
+}
+
+@media (max-width:768px) {
+    .flx {
+        flex-direction: column;
+    }
+
+    .flx.gap30 {
+        gap: 40px;
+    }
+
+    .flx.gap8 {
+        gap: 24px;
+    }
+
+}
+
+.hr {
+    display: block;
+    margin: 40px 0;
+    border: none;
+}
