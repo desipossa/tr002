@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+
+    <style>
+        .inner {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        .top_banner {
+            height: 240px;
+            background: url(./images/top_banner01.jpg);
+        }
+
+        .top_banner .inner {
+            position: relative;
+        }
+
+        .top_banner .btn {
+            position: absolute;
+            top: 40px;
+            right: 0;
+        }
+
+        #header {
+            height: 120px;
+            background: #ddd;
+        }
+
+        .main_visual {
+            height: calc(100vh - 120px);
+            background: #333;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: 998;
+
+            width: 320px;
+
+            transform: translate(-50%, -50%);
+        }
+
+        .popup .btn {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            right: 24px;
+
+            height: 40px;
+
+            background: #333;
+            color: #fff;
+        }
+
+        #footer .inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            height: 240px;
+        }
+
+        #footer .fl {
+            position: relative;
+        }
+
+        #footer .fl>a {
+            position: relative;
+            display: block;
+            height: 40px;
+            border: 1px solid #ddd;
+            line-height: 38px;
+            padding: 0 56px 0 24px;
+        }
+
+        #footer .fl>a i {
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translate(0, -50%);
+            line-height: 1;
+        }
+
+        #footer .fl>a.on img {
+            transform: rotate(180deg);
+        }
+
+        #footer .fl ul {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            border: 1px solid #ddd;
+            border-top: none;
+            background: #fff;
+
+            display: none;
+        }
+
+        #footer .fl ul li a {
+            display: block;
+            line-height: 40px;
+            border-top: 1px solid #ddd;
+            padding: 0 56px 0 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="top_banner">
+        <div class="inner">
+            <button class="btn">X</button>
+        </div>
+    </div>
+    <header id="header">
+        <div class="lang">
+            <a href="" class="k">kor</a>
+            <a href="" class="e">eng</a>
+        </div>
+    </header>
+    <style>
+        .lang {
+            width: 80px;
+
+            border: 1px solid #333;
+        }
+
+        .lang a {
+            display: block;
+            line-height: 40px;
+            border-top: 1px solid #333;
+            padding: 0 16px;
+        }
+
+        .lang .e {
+            display: none;
+        }
+
+        .lang:hover .k {
+            display: none;
+        }
+
+        .lang:hover .e {
+            display: block;
+        }
+    </style>
+    <main id="contnet">
+        <section class="main_visual">
+            <h2>main visual</h2>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="inner">
+            <address>
+                &copy; lee.
+            </address>
+            <div class="fl">
+                <a href="">FAMILY LINK <i><img src="./lib/icon/feather/chevron-up.svg" alt=""></i></a>
+                <ul>
+                    <li><a href="" target="_blank">naver</a></li>
+                    <li><a href="" target="_blank">daum</a></li>
+                    <li><a href="" target="_blank">google</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup">
+        <img src="./images/popup_250617.jpg" alt="">
+        <button class="btn">CLOSE</button>
+    </div>
+
+    <script>
+        $(function () {
+            $('.popup .btn').on('click', function () {
+                //$('.popup').hide();
+                $(this).parent().hide();
+            });
+
+            $('.top_banner .btn').on('click', function () {
+                $('.top_banner').slideUp(200)
+            });
+
+            $('#footer .fl>a').on('click', function (e) {
+                e.preventDefault();
+                $(this).toggleClass('on');
+                $(this).next().slideToggle(200)
+            })
+        })
+    </script>
+
+</body>
+
+</html>
