@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+    <script src="./lib/js/gsap.min.js"></script>
+    <script src="./lib/js/ScrollTrigger.min.js"></script>
+    <script src="./lib/js/jquery.mb.YTPlayer.min.js"></script>
+
+</head>
+
+<body>
+    <div class="t"></div>
+    <div class="test">
+        <div class="case">
+
+            <div class="box">
+
+                <div class="movie">ggg</div>
+                <div id="bgndVideo" class="player"
+                    data-property="{videoURL:'http://youtu.be/BsekcY04xvQ',containment:'.movie',autoPlay:true, mute:true, startAt:0, opacity:1}">
+                    My video</div>
+            </div>
+            <h2>hahaha</h2>
+            <div class="f"></div>
+        </div>
+
+    </div>
+    <div class="t"></div>
+
+    <style>
+        .t {
+            height: 100vh;
+            background: #ddd;
+        }
+
+        .case {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background: tomato;
+        }
+
+        .case .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 100%;
+            height: 100%;
+
+            background: yellow;
+
+            filter: invert(1);
+
+            overflow: hidden;
+        }
+
+        .case .f {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 100%;
+            height: 100%;
+
+            /* background: yellow; */
+
+            overflow: hidden;
+            opacity: 1;
+
+            backdrop-filter: invert(1);
+        }
+
+        .case .box::after {
+            content: "";
+            position: absolute;
+            inset: 0 0 0 0;
+        }
+
+        .case .box .movie {
+            position: absolute;
+            inset: 0 0 0 0;
+        }
+
+        .case h2 {
+            position: relative;
+            font-size: 200px;
+            font-weight: 900;
+        }
+    </style>
+
+
+    <script>
+        $(function () {
+            const tl = gsap.timeline();
+
+            tl
+                .to('.case .box', {
+                    width: 300,
+                    height: 400,
+                    borderRadius: 80
+                })
+                .to('.case .f', {
+                    width: 300,
+                    height: 400,
+                    borderRadius: 80
+                }, '<')
+                .to('.case .box .movie', {
+                    opacity: 0
+                });
+
+
+            ScrollTrigger.create({
+                animation: tl,
+                trigger: '.test',
+                pin: true,
+                scrub: 1,
+                start: 'top top',
+                end: "+=3000",
+                markers: true
+            });
+
+
+
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $("#bgndVideo").YTPlayer();
+        })
+    </script>
+</body>
+
+</html>
