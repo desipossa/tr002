@@ -1,0 +1,30 @@
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    color: #333;
+}
+
+.inner {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.default {
+    padding: 120px 0;
+}
+
+.default .title {
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.default .title h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.default .title p {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+}
