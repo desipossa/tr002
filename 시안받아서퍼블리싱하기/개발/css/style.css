@@ -72,3 +72,38 @@
 
     text-shadow: 4px 4px 8px #000;
 }
+
+.main_content {}
+
+.main_content .itm {}
+
+.main_content .itm strong {
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main_event {
+    background: #f2f2f2;
+}
+
+.main_event .itm {}
+
+.main_event .itm strong {
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#footer {
+    padding: 80px 0;
+}
+
+#footer address {
+    font-size: 16px;
+    font-weight: 400;
+}
