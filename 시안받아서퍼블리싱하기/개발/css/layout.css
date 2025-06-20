@@ -27,4 +27,17 @@ body {
     margin-top: 16px;
     font-size: 16px;
     font-weight: 400;
+    line-height: 16px;
+}
+
+.default .flx {
+    display: flex;
+}
+
+.default .flx>* {
+    flex: 1;
+}
+
+.default .flx img {
+    width: 100%;
 }

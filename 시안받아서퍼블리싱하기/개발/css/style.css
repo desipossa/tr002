@@ -1,0 +1,74 @@
+#header {}
+
+#header .hd_wrap {
+    display: flex;
+    align-items: center;
+    height: 120px;
+}
+
+#header .hd_wrap .gnb {
+    margin-left: auto;
+}
+
+#header .hd_wrap .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+#header .hd_wrap .gnb>ul>li>a {
+    display: block;
+    line-height: 120px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#header .hd_wrap .utils {
+    display: flex;
+    gap: 16px;
+    margin-left: 80px;
+}
+
+.main_visual {
+    position: relative;
+    background: url(../images/main_visual_bg.jpg) center center/cover;
+    height: calc(100vh - 120px);
+}
+
+.main_visual::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: #000;
+    opacity: 0.25;
+}
+
+.main_visual .slg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 1170px;
+    width: 100%;
+}
+
+.main_visual .slg h2 {
+    font-size: 40px;
+    font-weight: 400;
+    font-family: "Noto Serif KR", serif;
+    text-align: center;
+    color: #fff;
+
+    text-shadow: 4px 4px 8px #000;
+}
+
+.main_visual .slg strong {
+    display: block;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+
+    text-shadow: 4px 4px 8px #000;
+}
