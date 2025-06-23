@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <style>
+        body {
+            background: #333;
+            height: 200vh;
+        }
+
+        .gnb {
+            position: fixed;
+            top: 0;
+            left: -100vw;
+            width: 100vw;
+            height: 100vh;
+            background: #fff;
+        }
+
+        .btn {
+            display: none;
+            color: #fff;
+            border: 1px solid tomato;
+        }
+
+        @media (max-width:768px) {
+            .btn {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="gnb">
+        menu
+    </nav>
+    <button class="btn">menu</button>
+</body>
+
+</html>

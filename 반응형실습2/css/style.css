@@ -1,0 +1,168 @@
+#header {}
+
+#header .hd_wrap {
+    display: flex;
+    align-items: center;
+    height: 120px;
+}
+
+#header .hd_wrap .gnb {
+    margin-left: auto;
+}
+
+.mbtn {
+    display: none;
+}
+
+#header .hd_wrap .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+#header .hd_wrap .gnb>ul>li>a {
+    display: block;
+    line-height: 120px;
+    font-size: 18px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+#header .hd_wrap .utils {
+    display: flex;
+    gap: 16px;
+    margin-left: 80px;
+}
+
+@media (max-width:768px) {
+    #header .hd_wrap .gnb {
+
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 999;
+
+        padding: 120px 16px 0 16px;
+        width: calc(100% - 80px);
+        height: 200vh;
+        background: #fff;
+        border-right: 1px solid #ddd;
+    }
+
+    #header .hd_wrap .gnb.on {
+        left: 0;
+    }
+
+    .mbtn {
+        display: block;
+
+        position: fixed;
+        right: 16px;
+        top: 40px;
+        z-index: 999;
+
+        background: #fff;
+        padding: 8px;
+        border: 1px solid #ddd;
+    }
+
+
+    #header .hd_wrap .gnb>ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #header .hd_wrap .gnb>ul>li>a {
+        line-height: 40px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #header .hd_wrap .utils {
+        display: none;
+    }
+}
+
+.main_visual {
+    position: relative;
+    background: url(../images/main_visual_bg.jpg) center center/cover;
+    height: calc(100vh - 120px);
+}
+
+.main_visual::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: #000;
+    opacity: 0.25;
+}
+
+.main_visual .slg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 1170px;
+    width: 100%;
+}
+
+@media (max-width:768px) {
+    .main_visual .slg {
+        width: calc(100% - 32px);
+    }
+}
+
+.main_visual .slg h2 {
+    font-size: 40px;
+    font-weight: 400;
+    font-family: "Noto Serif KR", serif;
+    text-align: center;
+    color: #fff;
+
+    text-shadow: 4px 4px 8px #000;
+}
+
+.main_visual .slg strong {
+    display: block;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+
+    text-shadow: 4px 4px 8px #000;
+}
+
+.main_content {}
+
+.main_content .itm {}
+
+.main_content .itm strong {
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main_event {
+    background: #f2f2f2;
+}
+
+.main_event .itm {}
+
+.main_event .itm strong {
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#footer {
+    padding: 80px 0;
+}
+
+#footer address {
+    font-size: 16px;
+    font-weight: 400;
+}

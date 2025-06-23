@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <style>
+        .inner {
+            display: flex;
+            gap: 30px;
+            background: tomato;
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        @media (max-width:768px) {
+            .inner {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="inner">
+        <div class="itm">
+            <img src="./images/main_content01.jpg" alt="">
+        </div>
+        <div class="itm">
+            <img src="./images/main_content01.jpg" alt="">
+        </div>
+        <div class="itm">
+            <img src="./images/main_content01.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <style>
+        .main_visual {
+            position: relative;
+            height: 100vh;
+            background: url(./images/main_visual_bg.jpg) center center/cover;
+        }
+
+        .main_visual .slg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            max-width: 1170px;
+            width: 100%;
+        }
+
+        .main_visual .slg h2 {
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        @media (max-width:768px) {
+            .main_visual .slg {
+                width: calc(100% - 32px);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main_visual">
+        <div class="slg">
+            <h2>Lorem ipsum dolor sit.</h2>
+        </div>
+    </div>
+</body>
+
+</html>
