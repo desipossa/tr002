@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="hd_wrap">
+            <h1><a href="/">logo</a></h1>
+
+
+
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <a href="">MENU01</a>
+                        <ul>
+                            <li><a href="">semnu01</a></li>
+                            <li><a href="">semnu02</a></li>
+                            <li><a href="">semnu03</a></li>
+                            <li><a href="">semnu04</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">MENU02</a>
+                        <ul>
+                            <li><a href="">semnu01</a></li>
+                            <li><a href="">semnu02</a></li>
+                            <li><a href="">semnu03</a></li>
+                            <li><a href="">semnu04</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">MENU03</a>
+                    </li>
+                    <li>
+                        <a href="">MENU04</a>
+                        <ul>
+                            <li><a href="">semnu01</a></li>
+                            <li><a href="">semnu02</a></li>
+                            <li><a href="">semnu03</a></li>
+                            <li><a href="">semnu04</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mbtn">
+                <img src="./lib/icon/feather/menu.svg" alt="">
+            </button>
+        </div>
+    </header>
+    <main id="content">
+        <div class="main_visual"></div>
+    </main>
+
+
+
+    <style>
+        #header {}
+
+        #header .hd_wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1410px;
+            margin: 0 auto;
+        }
+
+        #header .gnb {}
+
+
+
+
+        #header .gnb>ul {
+            display: flex;
+            gap: 40px;
+        }
+
+        #header .gnb>ul>li>a {
+            display: block;
+            line-height: 120px;
+            white-space: nowrap;
+        }
+
+        #header .gnb>ul>li {
+            position: relative;
+        }
+
+        #header .gnb>ul>li ul {
+
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            z-index: 3;
+
+            transform: translate(-50%, -8px);
+            background: #fff;
+            border: 1px solid #ddd;
+
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.4s;
+        }
+
+        #header .gnb>ul>li:hover ul {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -16px);
+        }
+
+        #header .gnb>ul>li ul li a {
+            display: block;
+            padding: 0 40px;
+            line-height: 40px;
+            white-space: nowrap;
+        }
+
+        #header .gnb>ul>li ul li~li a {
+            border-top: 1px solid #ddd;
+        }
+
+        .mbtn {
+            display: none;
+        }
+
+
+        @media (max-width:768px) {
+            #header {}
+
+            #header .hd_wrap {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1410px;
+                margin: 0 auto;
+
+                /* r */
+                height: 120px;
+            }
+
+            #header .gnb {
+                /* r */
+                position: fixed;
+                top: 0;
+                left: -100%;
+                z-index: 999;
+
+                padding: 120px 16px 0 16px;
+
+                width: calc(100% - 80px);
+                height: 200vh;
+
+                background: #fff;
+                border-right: 1px solid #ddd;
+            }
+
+            #header .gnb.on {
+                left: 0;
+            }
+
+
+
+
+            #header .gnb>ul {
+                display: flex;
+                gap: 40px;
+
+                /* r */
+                flex-direction: column;
+                gap: 0;
+            }
+
+            #header .gnb>ul>li>a {
+                display: block;
+                line-height: 120px;
+                white-space: nowrap;
+
+                /* r */
+                line-height: 40px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            #header .gnb>ul>li {
+                position: relative;
+            }
+
+            #header .gnb>ul>li ul {
+                position: absolute;
+                top: 120px;
+                left: 50%;
+                z-index: 3;
+
+                transform: translate(-50%, -8px);
+                background: #fff;
+                border: 1px solid #ddd;
+
+                /* r */
+                display: none;
+                position: static;
+                transform: translate(0, 0);
+
+                opacity: 1;
+                visibility: visible;
+                transition: none;
+            }
+
+            #header .gnb>ul>li:hover ul {
+                /* r */
+                display: none;
+                transform: translate(0, 0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            #header .gnb>ul>li ul li a {
+                display: block;
+                padding: 0 40px;
+                line-height: 40px;
+                white-space: nowrap;
+            }
+
+            #header .gnb>ul>li ul li~li a {
+                border-top: 1px solid #ddd;
+            }
+
+            .mbtn {
+                display: none;
+
+                /* r */
+                display: block;
+                position: fixed;
+                top: 48px;
+                right: 16px;
+                z-index: 999;
+
+                background: #fff;
+                padding: 4px;
+                border: 1px solid #ddd;
+            }
+        }
+
+        .main_visual {
+            position: relative;
+            z-index: 1;
+            height: 640px;
+            background: #333;
+        }
+    </style>
+
+    <script>
+        $(function () {
+
+            $('.mbtn').on('click', function () {
+                $('#header .gnb').toggleClass('on')
+            });
+
+            $('#header .gnb>ul>li>a').on('click', function (e) {
+                if ($('#header .gnb').hasClass('on') && $(this).next().is('ul')) {
+                    e.preventDefault();
+                    $('#header .gnb>ul>li ul').stop().slideUp();
+                    $(this).next().stop().slideDown();
+                }
+            });
+
+            $(window).on('resize', function () {
+                if ($(window).width() > 768) {
+                    $('#header .gnb').removeClass('on');
+                    $('#header .gnb>ul>li ul').removeAttr('style')
+                }
+            });
+        })
+    </script>
+    <footer id="footer">
+        &copy; lee.
+    </footer>
+</body>
+
+</html>
