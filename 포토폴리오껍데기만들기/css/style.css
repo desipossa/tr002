@@ -1,0 +1,104 @@
+#header h1 {
+    position: fixed;
+    top: 8rem;
+    left: 8rem;
+    z-index: 999;
+}
+
+#header .cover_btn {
+    position: fixed;
+    top: 8rem;
+    right: 8rem;
+    z-index: 999;
+
+    width: 4rem;
+    height: 4rem;
+    background: var(--primary-color);
+}
+
+#header .gnb {
+    position: fixed;
+    top: 50%;
+    right: 8rem;
+    z-index: 999;
+
+}
+
+#header .gnb>ul>li~li {
+    margin-top: 4px;
+}
+
+#header .gnb>ul>li>a {
+    position: relative;
+    display: block;
+    line-height: 1.6rem;
+    font-size: 0;
+    width: 4rem;
+}
+
+#header .gnb>ul>li>a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: calc(100% - 2rem);
+    height: 1px;
+    background: #333;
+
+    transition: width 0.4s;
+}
+
+#header .gnb>ul>li.on>a::before {
+    width: 100%;
+}
+
+#header .cover_btn::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: url(../lib/icon/feather/menu.svg) no-repeat center center/24px;
+    filter: invert();
+}
+
+#header .cover_btn.on::before {
+    background: url(../lib/icon/feather/x.svg) no-repeat center center/24px;
+}
+
+#header .cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    inset: 0 0 0 0;
+    z-index: 998;
+    background: var(--secondary-color);
+
+    display: none;
+}
+
+#header .cover.on {
+    display: flex;
+}
+
+#footer address {
+    position: fixed;
+    bottom: 8rem;
+    left: 8rem;
+    z-index: 999;
+}
+
+#footer .to_top {
+    position: fixed;
+    bottom: 8rem;
+    right: 8rem;
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 4rem;
+    height: 4rem;
+    background: var(--primary-color);
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+
+    <style>
+        .inner {
+            max-width: 1170px;
+            margin: 120px auto;
+        }
+
+        .history {}
+
+        .history li {
+            position: relative;
+            display: flex;
+        }
+
+        .history li::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            width: 24px;
+            height: 24px;
+
+            border: 4px solid tomato;
+            border-radius: 50%;
+        }
+
+        .history li:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: 32px;
+            bottom: 8px;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            width: 2px;
+
+            background: tomato;
+        }
+
+        .history li .itm {
+            flex: 0 0 calc(50% - 80px);
+        }
+
+        .history li .itm strong {
+            display: block;
+            font-size: 80px;
+        }
+
+        .history li:nth-child(odd) {
+            justify-content: flex-start;
+            text-align: right;
+        }
+
+        .history li:nth-child(even) {
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="inner">
+        <ul class="history">
+            <li>
+                <div class="itm">
+                    <strong>
+                        1999
+                    </strong>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, ex nobis doloremque modi
+                        explicabo ab dicta!
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="itm">
+                    <strong>
+                        1999
+                    </strong>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, ex nobis doloremque modi
+                        explicabo ab dicta!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, ex nobis doloremque modi
+                        explicabo ab dicta!
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="itm">
+                    <strong>
+                        1999
+                    </strong>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, ex nobis doloremque modi
+                        explicabo ab dicta!
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="itm">
+                    <strong>
+                        1999
+                    </strong>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, ex nobis doloremque modi
+                        explicabo ab dicta!
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="itm">
+                    <strong>
+                        1999
+                    </strong>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, ex nobis doloremque modi
+                        explicabo ab dicta!
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="itm">
+                    <strong>
+                        1999
+                    </strong>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, ex nobis doloremque modi
+                        explicabo ab dicta!
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

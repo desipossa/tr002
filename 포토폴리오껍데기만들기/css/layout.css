@@ -1,0 +1,30 @@
+:root {
+    --primary-color: #555879;
+    --secondary-color: #DED3C4;
+    --point-color: #98A1BC;
+
+    --line-color: #dddddd;
+    --body-color: #444444;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--body-color);
+    font-size: 1.6rem;
+}
+
+.inner {
+    max-width: 141rem;
+    margin: 0 auto;
+}
+
+.flx {
+    display: flex;
+}
+
+.flx>* {
+    flex: 1;
+}

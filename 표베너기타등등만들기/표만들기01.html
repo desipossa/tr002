@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+
+    <style>
+        .inner {
+            max-width: 1170px;
+            margin: 120px auto;
+        }
+
+        .table {}
+
+        .table td,
+        .table th {
+            text-align: left;
+            padding: 16px 24px;
+            border: 1px solid #ddd;
+        }
+
+        .table th {
+            font-weight: 700;
+            background: #f9f9f9;
+            border-top: 2px solid tomato;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="inner">
+        <table class="table">
+
+            <colgroup>
+                <col style="width:120px" />
+                <col />
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th>title</th>
+                    <th>decription</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">lee</td>
+                    <td>Lorem ipsum dolor sit.</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Lorem ipsum dolor sit.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+
+</html>
