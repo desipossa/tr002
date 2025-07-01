@@ -5,6 +5,7 @@
 
     --line-color: #dddddd;
     --body-color: #444444;
+    --white-color: #ffffff;
 }
 
 html {
@@ -27,4 +28,22 @@ body {
 
 .flx>* {
     flex: 1;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 2.4rem;
+    height: 4rem;
+    border: 1px solid var(--color);
+    background: var(--color);
+}
+
+.btn.btn_web {
+    color: var(--white-color);
+}
+
+.btn.btn_photo {
+    color: var(--color);
+    background: transparent;
 }
