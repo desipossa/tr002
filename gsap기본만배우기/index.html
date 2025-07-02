@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+    <script src="./lib/js/gsap.min.js"></script>
+    <script src="./lib/js/ScrollTrigger.min.js"></script>
+    <script src="./js/test01.js"></script>
+
+    <style>
+        .doc {
+            height: 100vh;
+        }
+
+        .doc01 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .doc02 {
+            position: relative;
+        }
+
+        .doc02 .photo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100vh;
+
+            transform: translate(-50%, -50%);
+
+            background: url(./images/01.jpg) no-repeat center center/cover;
+        }
+
+        .doc02 .cover {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100vh;
+
+            transform: translate(-50%, -50%);
+
+            background: url(./images/02.jpg) no-repeat center center/cover;
+
+            opacity: 0;
+
+            filter: invert();
+        }
+
+        .doc02 .inv {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100vh;
+
+            transform: translate(-50%, -50%);
+
+            opacity: 0;
+
+            backdrop-filter: invert();
+        }
+
+        .doc02 .txt {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            font-size: 40px;
+            font-weight: 900;
+
+            white-space: nowrap;
+            color: #000;
+        }
+
+        .doc02 .txt span {
+            display: block;
+            margin-left: -400px;
+            opacity: 0;
+        }
+
+        .doc02 .txt strong {
+            display: block;
+            margin-left: 400px;
+            opacity: 0;
+        }
+
+        .box {
+            width: 80px;
+            height: 80px;
+            background: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="doc01 doc">
+        hahaha
+    </section>
+
+    <section class="doc02 doc">
+        <div class="photo"></div>
+        <div class="cover"></div>
+        <div class="txt">
+            <span>Lorem ipsum dolor sit amet consectetur.</span>
+            <strong>ipsum dolor sit amet consectetur.</strong>
+        </div>
+        <div class="inv"></div>
+    </section>
+
+</body>
+
+</html>
