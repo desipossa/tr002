@@ -276,6 +276,240 @@
     border-radius: 2.4rem;
 }
 
+
+#main_banner {
+    position: relative;
+    background: url(../images/main_slider_n02.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+#main_banner::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: url(../images/pattern5.png);
+    opacity: 0.5;
+}
+
+#main_banner .itm {
+    position: relative;
+
+    text-align: center;
+    color: var(--white-color);
+    text-shadow: 0 0 4px #000;
+}
+
+#main_banner .itm .lnk {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 4rem;
+    height: 5.6rem;
+    margin-top: 4rem;
+    border: 1px solid var(--white-color);
+
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+#main_content .itm {
+    text-align: center;
+}
+
+#main_content .itm::before {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-image: url(../images/line_iconset_b02.png);
+}
+
+#main_content .itm:nth-child(1):before {
+    background-position: -600px -200px;
+}
+
+#main_content .itm:nth-child(2):before {
+    background-position: -600px 0;
+}
+
+#main_content .itm:nth-child(3):before {
+    background-position: -200px -300px;
+}
+
+#main_content .itm strong {
+    display: block;
+    font-family: "Noto Serif KR", serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+#main_content .itm strong::after {
+    content: "";
+    display: block;
+    margin: 2.4rem auto;
+    width: 8rem;
+    height: 2px;
+    background: var(--secondary-color);
+}
+
+#main_solution {}
+
+#main_solution .solution_wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#main_solution .solution_wrap .itm {
+    /* overflow: hidden; */
+    position: relative;
+    min-width: 0;
+    background: var(--line-color);
+}
+
+#main_solution .solution_wrap .main_solution_slide01 {
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+#main_solution .solution_wrap .main_solution_slide01 .txt {
+    position: absolute;
+    top: 50%;
+    left: 8rem;
+    transform: translate(0, -50%);
+}
+
+#main_solution .solution_wrap .main_solution_slide01 .txt strong {
+    display: block;
+    font-family: "Noto Serif KR", serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+#main_solution .solution_wrap .main_solution_slide01 .txt strong::after {
+    content: "";
+    display: block;
+    margin: 1.6rem auto 1.6rem 2.4rem;
+    width: 1px;
+    height: 4rem;
+    background: var(--secondary-color);
+}
+
+#main_solution .solution_wrap .main_solution_slide01 .num {
+    position: absolute;
+    bottom: 8rem;
+    right: 8rem;
+
+    font-size: 24rem;
+    font-weight: 900;
+
+    opacity: 0.25;
+    font-style: italic;
+}
+
+#main_solution .solution_wrap .arrows {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 4;
+
+    transform: translate(50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#main_solution .solution_wrap .arrows button {
+    width: 40px;
+    height: 40px;
+
+    background: var(--white-color);
+    border: 1px solid var(--line-color);
+
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+#main_solution .solution_wrap .arrows button svg {
+    vertical-align: -2px;
+}
+
+#main_solution .solution_wrap .page {
+    position: absolute;
+    left: 8rem;
+    bottom: 8rem;
+    top: auto;
+    z-index: 4;
+
+    transform: translate3d(0px, 0px, 0);
+
+    display: flex;
+    gap: 8px;
+}
+
+#main_solution .solution_wrap .page span {
+    width: 8rem;
+    border-radius: 4px;
+
+    background: var(--dark-gray);
+    opacity: 0.5;
+}
+
+#main_solution .solution_wrap .page span.swiper-pagination-bullet-active {
+
+    background: var(--primary-color);
+    opacity: 1;
+}
+
+#main_solution .solution_wrap .main_solution_slide03 img {
+    filter: grayscale(1);
+}
+
+#main_solution .solution_wrap iframe {
+    width: 100%;
+    height: 100%;
+}
+
 #footer {
     margin-left: 24rem;
+    padding: 8rem 0;
+}
+
+#footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+}
+
+#footer ul.dot {
+    gap: 2.4rem;
+}
+
+#footer ul.dot li {
+    position: relative;
+}
+
+#footer ul.dot li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -1.2rem;
+
+    width: 2px;
+    height: 2px;
+    background: var(--dark-gray);
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+#footer address {
+    margin-top: 2.4rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
 }
