@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형실습01</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <link rel="stylesheet" href="./lib/css/swiper-bundle.min.css">
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+    <script src="./lib/js/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="inner">
+        <div class="left">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae suscipit atque unde?
+        </div>
+        <div class="right">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        a01
+                    </div>
+                    <div class="swiper-slide">
+                        a02
+                    </div>
+                    <div class="swiper-slide">
+                        a03
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .inner {
+            display: flex;
+            gap: 80px;
+            max-width: 1170px;
+            margin: 0 auto;
+            background: tan;
+        }
+
+        .inner>* {
+            flex: 1;
+        }
+
+        .left {
+            background: tomato;
+        }
+
+        .right {
+            /* overflow: hidden; */
+            min-width: 0;
+            background: teal;
+        }
+
+        @media (max-width: 1202px) {
+            .inner {
+                display: flex;
+                gap: 80px;
+                max-width: 1170px;
+                margin: 0 16px;
+                background: tan;
+            }
+        }
+
+        @media (max-width:768px) {
+            .inner {
+                display: flex;
+                gap: 40px;
+                max-width: 1170px;
+                margin: 0 16px;
+                background: tan;
+
+                /* display: block; */
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script>
+        $(function () {
+
+            const swiper = new Swiper('.swiper')
+        })
+    </script>
+
+</body>
+
+</html>

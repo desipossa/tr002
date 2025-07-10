@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형실습01</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="gnb">
+        <ul>
+            <li><a href="">menu01</a></li>
+            <li><a href="">menu02</a></li>
+            <li><a href="">menu03</a></li>
+            <li><a href="">menu04</a></li>
+        </ul>
+    </nav>
+
+    <!-- pc에서는 안보이고 핸드폰에서는 보이는 버튼 -->
+    <button class="mbtn">
+        <img src="./lib/icon/feather/menu.svg" alt="">
+    </button>
+
+    <style>
+        .gnb {
+            background: #f9f9f9;
+        }
+
+        .gnb>ul {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .gnb>ul>li>a {
+            display: block;
+            line-height: 80px;
+            white-space: nowrap;
+        }
+
+        .mbtn {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .gnb {
+                background: #f9f9f9;
+
+                display: none;
+            }
+
+            .gnb>ul {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+            }
+
+            .gnb>ul>li>a {
+                display: block;
+                line-height: 80px;
+                white-space: nowrap;
+            }
+
+            .mbtn {
+                display: block;
+
+                position: fixed;
+                top: 40px;
+                right: 16px;
+                z-index: 999;
+            }
+        }
+    </style>
+    <script>
+        $(function () {
+
+        })
+    </script>
+
+</body>
+
+</html>

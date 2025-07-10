@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형실습02</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 세로로 된 것을 가로 배치하기2 -->
+
+    <section class="default">
+        <div class="inner">
+            <div class="itm">01</div>
+            <div class="itm">02</div>
+            <div class="itm">03</div>
+        </div>
+    </section>
+
+    <style>
+        .default {
+            padding: 120px 0;
+        }
+
+        .inner {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        .itm {
+            background: tomato;
+        }
+
+        .default .inner {
+            display: flex;
+            gap: 30px;
+        }
+
+        @media (max-width:768px) {
+            .default .inner {
+                display: flex;
+                gap: 30px;
+
+                flex-direction: column;
+            }
+        }
+
+
+        .default .inner>* {
+            flex: 1;
+        }
+    </style>
+    <script>
+        $(function () {
+
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형실습01</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+
+    <div class="inner">box</div>
+
+    <style>
+        .inner {
+            max-width: 1170px;
+            margin: 0 auto;
+            background: tan;
+        }
+
+        @media (max-width: 1202px) {
+            .inner {
+                max-width: 1170px;
+                margin: 0 16px;
+                background: tan;
+            }
+        }
+    </style>
+    <script>
+        $(function () {
+
+        })
+    </script>
+
+</body>
+
+</html>
