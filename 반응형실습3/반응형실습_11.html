@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형실습01</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="gnb">
+        <ul>
+            <li>
+                <a href="">menu01</a>
+                <ul>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu02</a>
+                <ul>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu03</a>
+                <!-- <ul>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                </ul> -->
+            </li>
+            <li>
+                <a href="">menu04</a>
+                <ul>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu04</a>
+                <ul>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu04</a>
+                <ul>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu04</a>
+                <ul>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu01</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- pc에서는 안보이고 핸드폰에서는 보이는 버튼 -->
+    <button class="mbtn">
+        <img src="./lib/icon/feather/menu.svg" alt="">
+    </button>
+
+    <style>
+        .gnb {
+            background: #f9f9f9;
+        }
+
+        .gnb>ul {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .gnb>ul>li>a {
+            display: block;
+            line-height: 80px;
+            white-space: nowrap;
+        }
+
+        .gnb>ul>li {
+            position: relative;
+        }
+
+        .gnb>ul>li ul {
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            z-index: 4;
+            background: tan;
+
+            transform: translate(-50%, 0);
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: 0.5s;
+        }
+
+        .gnb>ul>li:hover ul {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -8px);
+        }
+
+        .gnb>ul>li ul a {
+            display: block;
+            line-height: 40px;
+            padding: 0 24px;
+        }
+
+        .mbtn {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .gnb {
+                background: #f9f9f9;
+
+                display: none;
+
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 999;
+
+                width: calc(100%);
+                height: 200vh;
+
+                padding: 120px 24px 0 24px;
+            }
+
+            .gnb.on {
+                display: block;
+            }
+
+            .gnb>ul {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .gnb>ul>li>a {
+                display: block;
+                line-height: 80px;
+                white-space: nowrap;
+
+                line-height: 40px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .gnb>ul>li {
+                position: relative;
+            }
+
+            .gnb>ul>li ul {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                z-index: 4;
+                background: tan;
+
+                position: static;
+                display: none;
+
+                transform: translate(0, 0);
+                opacity: 1;
+                visibility: visible;
+
+                transition: none;
+            }
+
+            .gnb>ul>li:hover ul {
+                display: none;
+                transform: translate(0, 0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .gnb>ul>li ul a {
+                display: block;
+                line-height: 40px;
+                padding: 0 24px;
+            }
+
+            .mbtn {
+                display: block;
+
+                position: fixed;
+                top: 40px;
+                right: 16px;
+                z-index: 999;
+            }
+        }
+    </style>
+    <script>
+        $(function () {
+            $('.mbtn').on('click', function () {
+                $('.gnb').toggleClass('on')
+            });
+
+            $('.gnb>ul>li>a').on('click', function (e) {
+                if ($('.gnb').hasClass('on') && $(this).next().is('ul')) {
+                    e.preventDefault();
+                    $('.gnb>ul>li ul').stop().slideUp();
+                    $(this).next().stop().slideToggle();
+                }
+            });
+
+
+            $(window).on('resize', function () {
+                let w = $(window).width();
+                if (w > 768) {
+                    $('.gnb').removeClass('on');
+                    $('.gnb>ul>li ul').removeAttr('style');
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>

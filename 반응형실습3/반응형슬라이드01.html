@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형실습01</title>
+    <link rel="stylesheet" href="./lib/css/reset.css">
+    <link rel="stylesheet" href="./lib/css/swiper-bundle.min.css">
+    <script src="./lib/js/jquery-1.12.4.min.js"></script>
+    <script src="./lib/js/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <section class="default">
+        <div class="inner">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./m01.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./m01.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./m01.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./m01.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./m01.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./m01.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .default {
+            padding: 120px 0;
+        }
+
+        .inner {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        img {
+            min-width: 100%;
+            width: 100%;
+        }
+    </style>
+    <script>
+        $(function () {
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 30,
+                breakpoints: {
+                    769: {
+                        slidesPerView: 5,
+                        spaceBetween: 30,
+                    }
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>
